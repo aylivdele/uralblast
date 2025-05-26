@@ -1,0 +1,175 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  .block-otchety {
+    margin-top: 50px;
+  }
+
+  /* Шапка */
+  .header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+  }
+
+  .othet_header {
+    text-align: start;
+  }
+
+  .description_header {
+    width: 100%;
+    text-align: start;
+  }
+
+  .back-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  .back-button .arrow {
+    font-size: 24px;
+    vertical-align: middle;
+  }
+
+  .title {
+    margin: 0;
+  }
+
+  /* Блок отчёта */
+  .report-item {
+    margin: 40px 0;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  .report-date {
+    display: flex;
+  }
+
+  .report-content {
+    flex: 1;
+  }
+
+  /* Карусель */
+  .carousel {
+    position: relative;
+    width: 391px;
+    flex-shrink: 0;
+  }
+
+  .carousel-inner {
+    position: relative;
+  }
+
+  .carousel img {
+    width: 100%;
+    height: 222px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+  }
+
+  .prev { left: 10px; }
+  .next { right: 10px; }
+
+  .carousel-dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 5px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+  }
+
+  .dot.active { background: white; }
+
+  /* Модальное окно */
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+  }
+
+  /* Кнопка загрузки */
+  .load-more {
+    display: block;
+    margin: 40px auto;
+    padding: 12px 40px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+
+  /* Мобильная версия */
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+
+    .report-item {
+      flex-direction: column-reverse;
+      margin: 20px 0;
+    }
+
+    .carousel {
+      width: 100%;
+    }
+
+    .report-content {
+      width: 100%;
+      text-align: center;
+    }
+
+    .back-button {
+      margin-bottom: 15px;
+    }
+  }

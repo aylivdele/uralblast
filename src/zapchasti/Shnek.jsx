@@ -1,0 +1,123 @@
+import React, { useState, useEffect, useRef } from "react";
+// Каталог продукция дробомет проходного типа тип
+
+const Shnek = () => {
+
+
+  // Состояния компонента
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [fullscreenImage, setFullscreenImage] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    email: "",
+    message: "",
+    file: null,
+  });
+
+
+  const handleFileChange = (e) => {
+    const file = e.target.files[0];
+    if (file && file.size > 20 * 1024 * 1024) {
+      alert("Файл слишком большой! Максимум 20 МБ");
+      return;
+    }
+    setFormData({ ...formData, file });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    alert("Ваша заявка отправлена, с вами свяжутся в ближайшее время");
+  };
+
+  return (
+    <div className="container zapchasti">
+      {/* Верхний блок */}
+      <div className="top-section">
+        <div className="image-block">
+          <img
+            src="images/13.png"
+            alt="Шнек"
+          />
+        </div>
+        <div className="text-block">
+          <h2 className="mg-2 md-9 mg-7">Шнек</h2>
+          <p className="drobemet-description">
+            Дробеметный шнек - очень важный элемент оборудования. Многие компании недооценивают его значение в работе дробемета и, как результат, наши специалисты, во время технического аудита дробеметов у заказчиков, в 60% случаев наблюдают катастрофический износ данного узла. Шнек предназначен для перемещения дроби от рабочей камеры до элеватора или от элеватора до накопительного бункера и турбин. Т.е. в случае износа шнека, уменьшается количество подаваемой дроби к турбинам (снижается производительность всего дробемета).
+          </p>
+        </div>
+      </div>
+
+
+
+
+      {/* Форма обратной связи */}
+      <div className="container-form">
+      <form className="contact-form md-6" onSubmit={handleSubmit}>
+        <h2>Интересует наше оборудование? Оставьте заявку и мы перезвоним</h2>
+        <div className="form-row">
+          <div className="form-group">
+            <input
+              type="text"
+              placeholder="Введите ваше имя"
+              value={formData.name}
+              onChange={(e) =>
+                setFormData({ ...formData, name: e.target.value })
+              }
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="tel"
+              placeholder="Введите номер телефона"
+              value={formData.phone}
+              onChange={(e) =>
+                setFormData({ ...formData, phone: e.target.value })
+              }
+            />
+          </div>
+          <div className="form-group">
+            <input
+              type="email"
+              placeholder="Введите ваш Email"
+              value={formData.email}
+              onChange={(e) =>
+                setFormData({ ...formData, email: e.target.value })
+              }
+            />
+          </div>
+        </div>
+
+        <div className="form-row-combined">
+          <div className="form-group">
+            <textarea
+              placeholder="Введите что вас интересует"
+              value={formData.message}
+              onChange={(e) =>
+                setFormData({ ...formData, message: e.target.value })
+              }
+              rows="5"
+            />
+          </div>
+
+          <div className="form-group">
+            <div className="file-upload">
+              <input type="file" onChange={handleFileChange} id="fileInput" />
+              <label htmlFor="fileInput">
+                <span>Вы можете прикрепить файл или чертеж весом до 20 МБ</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <button type="submit">Отправить заявку</button>
+      </form>
+      </div>
+
+    
+    </div>
+  );
+};
+
+export default Shnek;
