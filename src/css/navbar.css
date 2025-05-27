@@ -28,8 +28,16 @@
     height: 2.25rem;
 }
 
-.bg-black {
-    position: fixed;
+.section::before {
+  display: block; 
+  content: " "; 
+  margin-top: -63px; 
+  height: 63px; 
+  visibility: hidden; 
+}
+
+.navbar {
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;

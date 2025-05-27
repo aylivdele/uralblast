@@ -1,12 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-// Каталог продукция дробомет проходного типа тип
+import { useState } from "react";
 
-const BokovayaBronya = () => {
-
-
-  // Состояния компонента
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [fullscreenImage, setFullscreenImage] = useState(null);
+const PartsTemplate = ({name, description, image}) => {
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -27,30 +21,24 @@ const BokovayaBronya = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
     alert("Ваша заявка отправлена, с вами свяжутся в ближайшее время");
   };
 
   return (
-    <div className="container zapchasti">
+    <div className="container parts">
       {/* Верхний блок */}
       <div className="top-section">
         <div className="image-block">
           <img
-            src="images/6.png"
-            alt="Боковая броня турбины"
+            src={image}
+            alt={name}
           />
         </div>
         <div className="text-block">
-          <h2 className="mg-2 md-9 mg-7">Боковая броня турбины</h2>
-          <p className="drobemet-description">
-            Боковая броня защищает корпус турбины от прямого попадания дроби. При своевременной настройке положения факела вылета дроби, данный элемент не является быстроизнашиваемым, так как имеет минимальный контакт с дробью и может прослужить более 1500 моточасов. 
-          </p>
+          <h2 className="mg-2 md-9 mg-7">{name}</h2>
+          <p className="parts-description">{description}</p>
         </div>
       </div>
-
-
-
 
       {/* Форма обратной связи */}
       <div className="container-form">
@@ -105,7 +93,7 @@ const BokovayaBronya = () => {
             <div className="file-upload">
               <input type="file" onChange={handleFileChange} id="fileInput" />
               <label htmlFor="fileInput">
-                <span>Вы можете прикрепить файл или чертеж весом до 20 МБ</span>
+                <span>Вы можете прикрепить файл или чертеж размером до 20 МБ</span>
               </label>
             </div>
           </div>
@@ -120,4 +108,4 @@ const BokovayaBronya = () => {
   );
 };
 
-export default BokovayaBronya;
+export default PartsTemplate;

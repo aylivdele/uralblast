@@ -1,7 +1,4 @@
-import React from "react";
-
-const Advantages = () => {
-  const advantagesData = [
+export const advantagesData = [
     {
       id: 1,
       title: "Стабильное качество и короткие сроки запуска",
@@ -155,24 +152,4 @@ const Advantages = () => {
       ),
     },
     // Добавьте остальные элементы аналогично
-  ];
-
-  return (
-    <section className="advantages">
-      <div className="advantages__container">
-        <h2 className="advantages__title">Почему выбирают нас</h2>
-
-        <div className="advantages__grid">
-          {advantagesData.map((item) => (
-            <div key={item.id} className="advantage-card">
-              <div className="advantage-card__icon">{item.icon}</div>
-              <h3 className="advantage-card__title">{item.title}</h3>
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Advantages;
+];

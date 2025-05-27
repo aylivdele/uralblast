@@ -9,7 +9,7 @@ h3 {
 }
 
 p {
-  width: 90%;
+  /* width: 90%; */
   color: rgb(0, 0, 0);
   font-size: 17px;
   margin: 0 auto;
@@ -156,6 +156,7 @@ body {
 .advantages__container {
   max-width: 1430px;
   margin: 0 auto;
+  padding-bottom: 5vh;
 }
 
 .advantages__title {

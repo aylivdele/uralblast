@@ -69,7 +69,7 @@ const ServicesSection = () => {
   };
 
   return (
-    <div className="services-container-plus" id="services">
+    <div className="services-container-plus section" id="services">
       <section className="services-section">
         <h2>Наши услуги</h2>
 

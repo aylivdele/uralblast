@@ -1,7 +1,7 @@
 // ProductRouter.jsx
 import { useParams } from "react-router-dom";
 import ProductTemplate from "./ProductTemplate";
-import { productsData } from "./productData";
+import { productsData } from "../data/productData";
 
 const ProductPage = () => {
   const { id } = useParams();

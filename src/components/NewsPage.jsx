@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
-const ReportsPage = () => {
+const NewsPage = () => {
   const [visibleReports, setVisibleReports] = useState(3);
   const [modalImage, setModalImage] = useState(null);
   const [reports] = useState([
@@ -99,4 +99,4 @@ const ReportsPage = () => {
   );
 };
 
-export default ReportsPage;
+export default NewsPage;

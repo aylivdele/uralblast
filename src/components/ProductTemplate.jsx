@@ -1,6 +1,5 @@
 // ProductTemplate.jsx
 import React, { useState, useEffect, useRef } from "react";
-import "./product.css";
 
 const AdvantagesSection = ({ advantages }) => (
   <section style={{ margin: "40px 0" }}>

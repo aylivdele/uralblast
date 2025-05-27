@@ -2,24 +2,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import "./styles.css";
-import "./catalog.css";
-import "./video.css";
-import "./navbar.css";
-import "./formData.css";
-import "./footer.css";
-import "./products/product.css"
-import "./otchety.css"
+import "./css/styles.css";
+import "./css/catalog.css";
+import "./css/video.css";
+import "./css/navbar.css";
+import "./css/formData.css";
+import "./css/footer.css";
+import "./css/product.css"
+import "./css/otchety.css"
 import App from "./App";
 import reportWebVitals from './reportWebVitals';
-import ScrollToTop from './ScrollToTop';
+import ScrollToTop from './components/utils/ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
         <ScrollToTop/>
-
       <App />
     </BrowserRouter>
   </React.StrictMode>
