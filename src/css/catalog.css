@@ -16,7 +16,14 @@ h2 {
 }
 
 .product-catalog {
-  margin-top: 25px;
+  width: 100%;
+  max-width: 100%;
+  overflow: clip;
+  h2 {
+    text-align: center;
+    font-size: 25px;
+    margin: 40px 0;
+  }
 }
 
 .catalog-zapchasti {
@@ -47,11 +54,16 @@ h2 {
   transform-style: preserve-3d;
   transform-origin: center;
 }
-
-.container_card-iner:hover .card {
-  transform: rotateY(180deg);
+@media (min-width: 769px) {
+  .container_card-iner:hover .card {
+    transform: rotateY(180deg);
+  }
 }
-
+@media (max-width: 768px) {
+  .container_card-iner .card.flip{
+    transform: rotateY(180deg);
+  }
+}
 .card-front,
 .card-back {
   position: absolute;
@@ -191,13 +203,23 @@ h2 {
 
 @media (max-width: 768px) {
   .container_card-catalog {
-    grid-template-columns: 1fr;
+    max-width: 100%;
+    width: 100%;
+    display: flex;
     gap: 20px;
     justify-items: center;
+    overflow: scroll;
+    justify-content: flex-start;
   }
 
   .card_icon-images {
     width: 80%;
     margin: 0 auto;
   }
+
+  .container_card-iner {
+    perspective: 1000px;
+    min-width: 400px;
+    height: 400px;
+}
 }

@@ -1,8 +1,4 @@
-/* Стили формы обратной связи */
-.contact-block-form {
-  max-width: 1150px;
-  margin: 0px auto;
-}
+
 
 .form-block-row,
 .form-row-combined {
@@ -74,7 +70,7 @@
   font-weight: 500;
   border: none;
   padding: 15px 30px;
-  width: 250px;
+  width: 100%;
   margin: 0 auto;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -93,10 +89,6 @@
   .form-row-combined {
     gap: 15px;
   }
-
-  .contact-block-form {
-    padding: 15px;
-  }
 }
 
 @media (max-width: 768px) {
@@ -108,17 +100,9 @@
   .form-row-combined textarea {
     min-height: 100px;
   }
-
-  .contact-block-form button {
-    width: 100%;
-    max-width: 250px;
-  }
 }
 
 @media (max-width: 480px) {
-  .contact-block-form {
-    padding: 10px;
-  }
 
   .contact-block-form input,
   .contact-block-form textarea,

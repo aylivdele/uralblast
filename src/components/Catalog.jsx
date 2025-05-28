@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 const CatalogCard = ({ image, title, description, link }) => {
+  const [clicked, setClicked] = useState(false);
+  const onClick = e => {
+    e.preventDefault();
+    setClicked(!clicked);
+  };
   return (
-    <div className="container_card-iner">
-      <div className="card">
+    <div className="container_card-iner" onClick={ onClick }>
+      <div className={`card ${clicked ? 'flip' : ''}`}>
         <div className="card-front">
           <div className="front-content">
             <img className="card_icon-images" src={image} alt={title} />
@@ -37,7 +43,7 @@ const Catalog = ({id, data, link, title}) => {
           <CatalogCard
             key={card.id}
             image={card.image}
-            title={card.title}
+            title={card.title ?? card.name}
             description={card.cardDescription ?? card.description}
             link={card.link ?? `${link}/${card.id}`}
           />

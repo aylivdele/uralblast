@@ -21,10 +21,12 @@ function App() {
         <Route path="/" element={
           <>
             <Video />
-            <Catalog id='products' data={productsData} link={'/products'} title={'Наша продукция'}/>
-            <Apps />
-            <Form />
-            <Benefits />
+            <div className='sections'>
+              <Catalog id='products' data={productsData} link={'/products'} title={'Наша продукция'}/>
+              <Apps />
+              <Form />
+              <Benefits />
+            </div>
             <Footer />
           </>
         } />
@@ -32,7 +34,7 @@ function App() {
         {/* Страницы продуктов */}
         <Route path="/products" element={<Catalog id='products' data={productsData} link={'/products'} title={'Наша продукция'}/>} />
         <Route path="/products/:id" element={<ProductPage />} />
-        <Route path="/parts" element={<Catalog id='parts' data={partsData} link={'parts'} title={'Запчасти'}/>} />
+        <Route path="/parts" element={<Catalog id='parts' data={partsData} link={'/parts'} title={'Запчасти'}/>} />
         <Route path="/parts/:id" element={<PartPage />} />
 
         <Route path="/news" element={<NewsPage />} />
