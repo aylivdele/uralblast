@@ -11,7 +11,7 @@ import PartPage from './components/PartPage';
 import { productsData } from './data/productData';
 import { partsData } from './data/partsData';
 import NewsPage from './components/NewsPage';
-import SideButton from './components/SideButton';
+import SideButton from './components/SideButtons';
 
 function App() {
   return (

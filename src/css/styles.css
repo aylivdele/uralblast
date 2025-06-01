@@ -37,18 +37,59 @@ body {
   background: #fff;
 }
 
-.side-button {
-  color: white;
+.side-container {
   position: fixed;
   right: 0;
   top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
   z-index: 99999;
-  writing-mode: sideways-lr;
-  background: #044fac;
-  padding: 10px;
-  border-radius: 10px 0 0 10px;
-  box-shadow: -1px 4px 14px 1px #000000b4;
+  align-items: flex-end;
+
+  .side-text,.side-button {
+    display: flex;
+    gap: 5px;
+    color: white;
+    background: #044fac;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    box-shadow: -1px 4px 14px 1px #000000b4;
+    width: 40px;
+  }
+
+  .side-text {
+    writing-mode: sideways-lr;
+  }
+
+  .side-button {
+    display: flex;
+    align-items: center;
+    --a-width: 150px;
+    width: calc(var(--a-width) + 40px);
+    transform: translateX(var(--a-width));
+    -webkit-transition: transform 0.5s ease-in-out;
+    -moz-transition: transform 0.5s ease-in-out;
+    -o-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
+    a {
+      width: var(--a-width);
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      &.clicked {
+        transform: translateX(0);
+      }
+    }
+    @media (min-width: 769px) {
+      &:hover {
+        transform: translateX(0);
+    }
+    }
+  }
 }
+
+
 .sections {
   width: fit-content;
   max-width: 100%;
