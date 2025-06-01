@@ -102,8 +102,8 @@ const ServicesSection = () => {
               </div>
             </div>
 
-            <div className="contact-form-advantes">
-              <h3>Нужна сервисная помощь? Свяжитесь с нами</h3>
+            <div className="contact-form-advantes section" id='service-form'>
+              <h2>Нужна сервисная помощь? Свяжитесь с нами</h2>
               <form onSubmit={handleSubmit}>
                 <div className="form-row-advantes">
                   <input

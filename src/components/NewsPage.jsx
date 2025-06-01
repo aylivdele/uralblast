@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import ImageCarousel from './ImageCarousel';
 
 const NewsPage = () => {
   const [visibleReports, setVisibleReports] = useState(3);
@@ -9,61 +10,16 @@ const NewsPage = () => {
       date: '11.06.2222',
       title: 'Запуск печи 500 кг 400 кВт, в г. Ярославле',
       description: 'Произвели запуск двух печей в г.Ярославль, 500 кг каждая по стали, пусконаладочные работы были произведены в срок',
-      images: ['/images/photo_2025-05-12_15-12-31 (2).jpg', '/images/photo_2025-05-12_15-12-29.jpg', '/images/photo_2025-05-12_15-12-31.jpg']
+      images: [{id: 1, url: '/images/photo_2025-05-12_15-12-31 (2).jpg'}, {id: 2, url: '/images/photo_2025-05-12_15-12-29.jpg'}, {id: 3, url: '/images/photo_2025-05-12_15-12-31.jpg'}]
     },
     // Добавьте больше отчётов
   ]);
-
-  // Карусель изображений компонент
-  const ImageCarousel = ({ images }) => {
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    return (
-      <div className="carousel">
-        <div className="carousel-inner">
-          <img 
-            src={images[currentImageIndex]} 
-            alt="Карусель" 
-            onClick={() => setModalImage(images[currentImageIndex])}
-          />
-          {images.length > 1 && (
-            <>
-              <button 
-                className="carousel-button prev"
-                onClick={() => setCurrentImageIndex(
-                  (prev) => (prev > 0 ? prev - 1 : images.length - 1)
-                )}
-              >‹</button>
-              <button 
-                className="carousel-button next"
-                onClick={() => setCurrentImageIndex(
-                  (prev) => (prev < images.length - 1 ? prev + 1 : 0)
-                )}
-              >›</button>
-              <div className="carousel-dots">
-                {images.map((_, index) => (
-                  <span 
-                    key={index}
-                    className={`dot ${index === currentImageIndex ? 'active' : ''}`}
-                    onClick={() => setCurrentImageIndex(index)}
-                  />
-                ))}
-              </div>
-            </>
-          )}
-        </div>
-      </div>
-    );
-  };
 
   return (
     <div className="container block-otchety">
       {/* Шапка */}
       <header className="header">
-        <button className="back-button">
-          <span className="arrow">‹</span> Назад
-        </button>
-        <h1 className="title">Отчёты</h1>
+        <h2 className="title">Новости</h2>
       </header>
 
       {/* Список отчётов */}

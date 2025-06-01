@@ -400,18 +400,6 @@ table.iksweb tr:hover td{color:#000000;cursor:default;} */
   position: relative;
 }
 
-.arrow::before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 3px;
-  width: 10px;
-  height: 10px;
-  border-left: 2px solid black;
-  border-bottom: 2px solid black;
-  transform: rotate(-45deg);
-  transition: transform 0.3s ease;
-}
 
 .faq-item.active .arrow::before {
   transform: rotate(135deg);

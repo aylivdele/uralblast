@@ -4,15 +4,11 @@ const VideoBackgroundSection = () => {
   return (
     <section className="video-section">
       <div className="video-container">
-        <video 
-          autoPlay 
-          muted 
-          loop 
+        <img 
+          src="/content/videos.gif"
           className="background-video"
-        >
-          <source src="/content/videos.mp4" type="video/mp4" />
-          Ваш браузер не поддерживает видео тег.
-        </video>
+          alt='backgound gif'
+        />
         <div className="video-overlay" />
         
         <div className="video-content">

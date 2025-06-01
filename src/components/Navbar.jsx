@@ -30,7 +30,7 @@ const Navbar = () => {
             <Link to="/news" className="text-gray-300 hover:text-white">Новости</Link>
           </li>
           <li>
-            <Link to="/contacts" className="text-gray-300 hover:text-white" alt='Контакты'>Контакты</Link>
+            <HashLink smooth to="/#service-form" className="text-gray-300 hover:text-white" alt='Контакты'>Контакты</HashLink>
           </li>
         </ul>
         {/* <button className="md:hidden flex justify-center w-8 h-8 hover:bg-gray-600 rounded-lg burger" onClick={ onBurgerClick }>

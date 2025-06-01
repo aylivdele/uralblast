@@ -1,5 +1,5 @@
 // ProductTemplate.jsx
-import React, { useState, useEffect, useRef } from "react";
+import ImageCarousel from "./ImageCarousel";
 
 const AdvantagesSection = ({ advantages }) => (
   <section style={{ margin: "40px 0" }}>
@@ -16,24 +16,7 @@ const AdvantagesSection = ({ advantages }) => (
 );
 
 const ProductTemplate = ({ title, image, description, advantages, tableData, carouselImages }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [fullscreenImage, setFullscreenImage] = useState(null);
-  const carouselRef = useRef(null);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [carouselImages.length]);
-
-  const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? carouselImages.length - 1 : prev - 1));
-  };
-
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-  };
+  
 
   return (
     <div className="container">
@@ -49,23 +32,7 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
         </div>
       </div>
 
-      <div className="carousel-container">
-        <div className="carousel-track" ref={carouselRef} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-          {carouselImages.map((img, index) => (
-            <div className="carousel-item" key={index}>
-              <img src={img.url} alt={`carousel-${index}`} onClick={() => setFullscreenImage(img.url)} />
-            </div>
-          ))}
-        </div>
-        <button className="carousel-arrow left" onClick={handlePrev}>&lt;</button>
-        <button className="carousel-arrow right" onClick={handleNext}>&gt;</button>
-      </div>
-
-      {fullscreenImage && (
-        <div className="fullscreen-overlay" onClick={() => setFullscreenImage(null)}>
-          <img src={fullscreenImage} alt="fullscreen" />
-        </div>
-      )}
+      <ImageCarousel images={carouselImages}/>
 
       <AdvantagesSection advantages={advantages} />
 

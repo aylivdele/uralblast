@@ -37,6 +37,18 @@ body {
   background: #fff;
 }
 
+.side-button {
+  color: white;
+  position: fixed;
+  right: 0;
+  top: 20vh;
+  z-index: 99999;
+  writing-mode: sideways-lr;
+  background: #044fac;
+  padding: 10px;
+  border-radius: 10px 0 0 10px;
+  box-shadow: -1px 4px 14px 1px #000000b4;
+}
 .sections {
   width: fit-content;
   max-width: 100%;

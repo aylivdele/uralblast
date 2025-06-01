@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ContactForm from "./ContactForm";
 
 const PartsTemplate = ({name, description, image}) => {
   const [formData, setFormData] = useState({
@@ -40,68 +41,7 @@ const PartsTemplate = ({name, description, image}) => {
         </div>
       </div>
 
-      {/* Форма обратной связи */}
-      <div className="container-form">
-      <form className="contact-form md-6" onSubmit={handleSubmit}>
-        <h2>Интересует наше оборудование? Оставьте заявку и мы перезвоним</h2>
-        <div className="form-row">
-          <div className="form-group">
-            <input
-              type="text"
-              placeholder="Введите ваше имя"
-              value={formData.name}
-              onChange={(e) =>
-                setFormData({ ...formData, name: e.target.value })
-              }
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="tel"
-              placeholder="Введите номер телефона"
-              value={formData.phone}
-              onChange={(e) =>
-                setFormData({ ...formData, phone: e.target.value })
-              }
-            />
-          </div>
-          <div className="form-group">
-            <input
-              type="email"
-              placeholder="Введите ваш Email"
-              value={formData.email}
-              onChange={(e) =>
-                setFormData({ ...formData, email: e.target.value })
-              }
-            />
-          </div>
-        </div>
-
-        <div className="form-row-combined">
-          <div className="form-group">
-            <textarea
-              placeholder="Введите что вас интересует"
-              value={formData.message}
-              onChange={(e) =>
-                setFormData({ ...formData, message: e.target.value })
-              }
-              rows="5"
-            />
-          </div>
-
-          <div className="form-group">
-            <div className="file-upload">
-              <input type="file" onChange={handleFileChange} id="fileInput" />
-              <label htmlFor="fileInput">
-                <span>Вы можете прикрепить файл или чертеж размером до 20 МБ</span>
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <button type="submit">Отправить заявку</button>
-      </form>
-      </div>
+      <ContactForm />
 
     
     </div>
