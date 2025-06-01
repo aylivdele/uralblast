@@ -1,5 +1,5 @@
 import { HashLink } from 'react-router-hash-link';
-import useOutsideAlerter from './utils/ousideAlerter.hook';
+import useOutsideAlerter from '../hooks/ousideAlerter.hook';
 
 const SideButtons = () => {
   const emailRef = useOutsideAlerter();

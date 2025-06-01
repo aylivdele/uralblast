@@ -1,8 +1,9 @@
 // ProductTemplate.jsx
+import Breadcrumbs from "./Breadcrumbs";
 import ImageCarousel from "./ImageCarousel";
 
 const AdvantagesSection = ({ advantages }) => (
-  <section style={{ margin: "40px 0" }}>
+  <section style={{ margin: "40px 0" }} className="appear">
     <h2 className="gradient-text">Основные преимущества</h2>
     <div className="container_modification_mufel-pech">
       {advantages.map((advantage, index) => (
@@ -19,12 +20,13 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
   
 
   return (
-    <div className="container">
+    <div className="container" style={{ overflow: 'hidden'}}>
+      <Breadcrumbs name={title}/>
       <div className="top-section">
-        <div className="image-block">
+        <div className="image-block from-left">
           <img src={image} alt={title} />
         </div>
-        <div className="text-block">
+        <div className="text-block from-right">
           <h2 className="mg-2 md-9 mg-7">{title}</h2>
           {description.map((para, index) => (
             <p key={index}>{para}</p>
@@ -36,7 +38,7 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
 
       <AdvantagesSection advantages={advantages} />
 
-      <div className="box_mufelnye_pechi-table-model">
+      <div className="box_mufelnye_pechi-table-model appear">
         <table className="iksweb_l">
           <thead>
             <tr>

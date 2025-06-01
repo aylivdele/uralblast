@@ -78,7 +78,7 @@ const ServicesSection = () => {
             {servicesData.map((service, index) => (
               <div
                 key={index}
-                className={`service-item ${
+                className={`from-left service-item ${
                   selectedService === index ? "active" : ""
                 }`}
                 onClick={() => setSelectedService(index)}
@@ -97,12 +97,12 @@ const ServicesSection = () => {
             <div className="service-content">
               <div className="content-block active">
                 {servicesData[selectedService].description.map((text, i) => (
-                  <p key={i}>{text}</p>
+                  <p key={i} className="from-right">{text}</p>
                 ))}
               </div>
             </div>
 
-            <div className="contact-form-advantes section" id='service-form'>
+            <div className="contact-form-advantes section from-right" id='service-form'>
               <h2>Нужна сервисная помощь? Свяжитесь с нами</h2>
               <form onSubmit={handleSubmit}>
                 <div className="form-row-advantes">

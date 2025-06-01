@@ -35,7 +35,7 @@ const CatalogCard = ({ image, title, description, link }) => {
 
 const Catalog = ({id, data, link, title}) => {
   return (
-    <section className="product-catalog section" id={id}>
+    <section className="product-catalog section appear" id={id}>
       <h2>{title}</h2>
 
       <div className="container_card-catalog">

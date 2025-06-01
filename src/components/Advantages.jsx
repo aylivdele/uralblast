@@ -2,7 +2,7 @@ import { advantagesData } from "../data/advantagesData";
 
 const Advantages = () => {
   return (
-    <section className="advantages section">
+    <section className="advantages section appear">
       <div className="advantages__container">
         <h2 className="advantages__title">Почему выбирают нас</h2>
 

@@ -61,10 +61,10 @@ const ImageCarousel = ({images}) => {
 
   return (
     <>
-      <div className="carousel-container">
+      <div className="carousel-container appear">
         <div className="carousel-track" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
           {(images ?? []).map((img, index) => (
-            <div className="carousel-item" key={index}>
+            <div className={`carousel-item ${isPortrait ? 'portrait' : ''}`} key={index}>
               <img src={img.url} alt={`carousel-${index}`} onClick={() => setFullscreenImage(img.url)} />
             </div>
           ))}

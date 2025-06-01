@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ContactForm from "./ContactForm";
+import Breadcrumbs from "./Breadcrumbs";
 
 const PartsTemplate = ({name, description, image}) => {
   const [formData, setFormData] = useState({
@@ -27,6 +28,7 @@ const PartsTemplate = ({name, description, image}) => {
 
   return (
     <div className="container parts">
+      <Breadcrumbs name={name}/>
       {/* Верхний блок */}
       <div className="top-section">
         <div className="image-block">

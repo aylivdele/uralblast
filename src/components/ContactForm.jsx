@@ -25,7 +25,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form className="contact-block-form section" id='contact-form' onSubmit={handleSubmit}>
+    <form className="contact-block-form appear section" id='contact-form' onSubmit={handleSubmit}>
       <h2>Интересует наше оборудование? Оставьте заявку и мы перезвоним</h2>
       <div className="form-block-row">
         <div className="form-group">

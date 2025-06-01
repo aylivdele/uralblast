@@ -5,7 +5,6 @@ function useOutsideAlerter() {
 
   useEffect(() => {
     function handleClick(event) {
-      console.log(event.target);
       if (ref.current && !ref.current.contains(event.target)) {
         ref.current.classList.remove('clicked');
       }

@@ -12,8 +12,14 @@ import { productsData } from './data/productData';
 import { partsData } from './data/partsData';
 import NewsPage from './components/NewsPage';
 import SideButton from './components/SideButtons';
+import useSrollToTop from './hooks/scrollToTop.hook';
+import useAnimations from './hooks/useAnimations.hook';
 
 function App() {
+
+  useSrollToTop();
+  useAnimations();
+
   return (
     <div className="app">
       <SideButton/>

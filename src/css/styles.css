@@ -89,6 +89,16 @@ body {
   }
 }
 
+.breadcrumbs {
+  display: flex;
+  gap: 2vw;
+  justify-content: flex-start;
+  font-size: 20px;
+  .link {
+    font-weight: 700;
+    text-decoration: underline;
+  }
+}
 
 .sections {
   width: fit-content;
@@ -327,5 +337,63 @@ body {
   .advantage-card__icon {
     width: 70px;
     height: 70px;
+  }
+}
+
+.slide-in-from-right {
+  animation: 1.5s ease-out 0s 1 slideInFromRight forwards;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;  
+  }
+}
+
+.slide-in-from-left {
+  animation: 1.5s ease-out 0s 1 slideInFromLeft forwards;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+.slide-in-from-down {
+  animation: 1.5s ease-out 0s 1 slideInFromDown forwards;
+}
+
+@keyframes slideInFromDown {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 100%;
+  }
+}
+
+.appear-on-screen {
+  animation: 1.5s ease-out 0s 1 appear forwards;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100%;
   }
 }
