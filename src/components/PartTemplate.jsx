@@ -30,14 +30,14 @@ const PartsTemplate = ({name, description, image}) => {
     <div className="container parts">
       <Breadcrumbs name={name}/>
       {/* Верхний блок */}
-      <div className="top-section">
+      <div className="top-section from-left">
         <div className="image-block">
           <img
             src={image}
             alt={name}
           />
         </div>
-        <div className="text-block">
+        <div className="text-block from-right">
           <h2 className="mg-2 md-9 mg-7">{name}</h2>
           <p className="parts-description">{description}</p>
         </div>
