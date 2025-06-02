@@ -43,7 +43,7 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
           <thead>
             <tr>
               {Object.keys(tableData[0]).filter(key => key !== "isColSpan" && key !== "text").map((key, index) => (
-                <th key={index}>{key}</th>
+                <th className="table_sm-01" key={index}>{key}</th>
               ))}
             </tr>
           </thead>
@@ -51,12 +51,12 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
             {tableData.map((row, index) => (
               row.isColSpan ? (
                 <tr key={index}>
-                  <td colSpan="100%">{row.text}</td>
+                  <td className="table_sm-01" colSpan="100%">{row.text}</td>
                 </tr>
               ) : (
                 <tr key={index}>
                   {Object.values(row).map((val, i) => (
-                    <td key={i}>{val}</td>
+                    <td className="table_sm-01" key={i}>{val}</td>
                   ))}
                 </tr>
               )

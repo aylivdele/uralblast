@@ -9,7 +9,7 @@ const SideButtons = () => {
     <div className='side-container'>
       <div className='side-button' ref={emailRef}>
         <img src='/images/email.svg'/>
-        <a href='mailto:example@mail.ru'>example@mail.ru</a>
+        <a href='mailto:Pao84@mail.ru'>Pao84@mail.ru</a>
       </div>
       <div className='side-button' ref={phoneRef}>
         <img src='/images/phone-call.svg'/>

@@ -95,8 +95,8 @@ const Footer = () => {
           <address className="footer__contacts">
             <h3 className="footer__subtitle"><strong>Контакты</strong></h3>
             <p className="contact-item">
-              <a href="mailto:example@mail.ru" className="contact-link">
-                example@mail.ru
+              <a href="mailto:Pao84@mail.ru" className="contact-link">
+                Pao84@mail.ru
               </a>
             </p>
             <p className="contact-item">

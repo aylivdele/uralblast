@@ -14,7 +14,7 @@ const VideoBackgroundSection = () => {
         <div className="video-content">
           <h2 className="video-title">Наш производственный процесс</h2>
           <p className="video-text">Посмотрите как мы создаем лучшее оборудование</p>
-          <button className="video-button">Подробнее о производстве</button>
+          {/* <button className="video-button">Подробнее о производстве</button> */}
         </div>
       </div>
     </section>

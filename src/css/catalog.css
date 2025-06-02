@@ -188,6 +188,14 @@ h2 {
   animation: shine 1.5s;
 }
 
+@media (min-width: 993px) and (max-width: 1200px) {
+  .container_card-catalog {
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 15px;
+}
+}
+
 @media (max-width: 992px) {
   .container_card-catalog {
     grid-template-columns: repeat(2, 1fr);
@@ -219,7 +227,7 @@ h2 {
 
   .container_card-iner {
     perspective: 1000px;
-    min-width: 400px;
+    min-width: 300px;
     height: 400px;
 }
 }

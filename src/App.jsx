@@ -24,7 +24,7 @@ function App() {
     <div className="app">
       <SideButton/>
        <Navbar />
-       
+
       <Routes>
         <Route path="/" element={
           <>
@@ -45,7 +45,7 @@ function App() {
         <Route path="/parts" element={<Catalog id='parts' data={partsData} link={'/parts'} title={'Запчасти'}/>} />
         <Route path="/parts/:id" element={<PartPage />} />
 
-        <Route path="/news" element={<NewsPage />} />
+        {/* <Route path="/news" element={<NewsPage />} /> */}
        
       </Routes>
     </div>

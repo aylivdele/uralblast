@@ -26,9 +26,9 @@ const Navbar = () => {
           <li>
             <HashLink smooth to="/#services" className="text-gray-300 hover:text-white">Услуги</HashLink>
           </li>
-          <li>
+          {/* <li>
             <Link to="/news" className="text-gray-300 hover:text-white">Новости</Link>
-          </li>
+          </li> */}
           <li>
             <HashLink smooth to="/#service-form" className="text-gray-300 hover:text-white" alt='Контакты'>Контакты</HashLink>
           </li>
