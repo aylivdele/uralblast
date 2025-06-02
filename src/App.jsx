@@ -24,7 +24,8 @@ function App() {
     <div className="app">
       <SideButton/>
        <Navbar />
-
+     
+       
       <Routes>
         <Route path="/" element={
           <>
@@ -35,7 +36,6 @@ function App() {
               <Form />
               <Benefits />
             </div>
-            <Footer />
           </>
         } />
 
@@ -46,8 +46,9 @@ function App() {
         <Route path="/parts/:id" element={<PartPage />} />
 
         {/* <Route path="/news" element={<NewsPage />} /> */}
-       
       </Routes>
+       <Footer />
+
     </div>
   );
 }
