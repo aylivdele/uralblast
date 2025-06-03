@@ -66,16 +66,16 @@ export const productsData = [
       { title: "Универсальность", text: "Обработка деталей от мелких до крупных (до 300 кг)." }
     ],
     tableData: [
-      { model: "УИД-3110", voltage: "380/50", power: "9.7", telpherCount: "1", productivity: "1", ventilation: "800", dimensions: "300", widthproduct: "15", availability: "Под заказ" },
-      { model: "УИД-3113", voltage: "380/50", power: "11.1", telpherCount: "1", productivity: "2", ventilation: "2000", dimensions: "600", widthproduct: "30", availability: "Под заказ" },
-      { model: "УИД-320", voltage: "380/50", power: "7", telpherCount: "1*4кВт", productivity: "0.3", ventilation: "1400", dimensions: "50", widthproduct: "5", availability: "Под заказ" },
-      { model: "УИД-322", voltage: "380/50", power: "6.4", telpherCount: "1*4кВт", productivity: "0.5", ventilation: "1600", dimensions: "80", widthproduct: "10", availability: "Под заказ" },
-      { model: "УИД-324", voltage: "380/50", power: "10.85", telpherCount: "1*7.5", productivity: "0.7", ventilation: "2000", dimensions: "100", widthproduct: "10", availability: "Под заказ" },
-      { model: "УИД-326", voltage: "380/50", power: "13.25", telpherCount: "2*7.5кВт", productivity: "1.2", ventilation: "2500", dimensions: "200", widthproduct: "10", availability: "Под заказ" },
-      { model: "УИД-3210", voltage: "380/50", power: "28.45", telpherCount: "1*15кВт", productivity: "2.5", ventilation: "4200", dimensions: "500", widthproduct: "30", availability: "Под заказ" },
-      { model: "УИД-3220", voltage: "380/50", power: "46", telpherCount: "2*11кВт", productivity: "5", ventilation: "5600", dimensions: "1000", widthproduct: "50", availability: "Под заказ" },
-      { model: "УИД-15", voltage: "380/50", power: "50", telpherCount: "1", productivity: "6", ventilation: "7500", dimensions: "1500", widthproduct: "250", availability: "Под заказ" },
-      { model: "УИД-28", voltage: "380/50", power: "65", telpherCount: "1", productivity: "14", ventilation: "10500", dimensions: "3500", widthproduct: "350", availability: "Под заказ" },
+      { model: "УИД-3110", voltage: "380/50", power: "9.7", turbineCount: "1", productivity: "1", ventilation: "800", loadingWeight: "300", widthproduct: "15", availability: "Под заказ" },
+      { model: "УИД-3113", voltage: "380/50", power: "11.1", turbineCount: "1", productivity: "2", ventilation: "2000", loadingWeight: "600", widthproduct: "30", availability: "Под заказ" },
+      { model: "УИД-320", voltage: "380/50", power: "7", turbineCount: "1*4кВт", productivity: "0.3", ventilation: "1400", loadingWeight: "50", widthproduct: "5", availability: "Под заказ" },
+      { model: "УИД-322", voltage: "380/50", power: "6.4", turbineCount: "1*4кВт", productivity: "0.5", ventilation: "1600", loadingWeight: "80", widthproduct: "10", availability: "Под заказ" },
+      { model: "УИД-324", voltage: "380/50", power: "10.85", turbineCount: "1*7.5", productivity: "0.7", ventilation: "2000", loadingWeight: "100", widthproduct: "10", availability: "Под заказ" },
+      { model: "УИД-326", voltage: "380/50", power: "13.25", turbineCount: "2*7.5кВт", productivity: "1.2", ventilation: "2500", loadingWeight: "200", widthproduct: "10", availability: "Под заказ" },
+      { model: "УИД-3210", voltage: "380/50", power: "28.45", turbineCount: "1*15кВт", productivity: "2.5", ventilation: "4200", loadingWeight: "500", widthproduct: "30", availability: "Под заказ" },
+      { model: "УИД-3220", voltage: "380/50", power: "46", turbineCount: "2*11кВт", productivity: "5", ventilation: "5600", loadingWeight: "1000", widthproduct: "50", availability: "Под заказ" },
+      { model: "УИД-15", voltage: "380/50", power: "50", turbineCount: "1", productivity: "6", ventilation: "7500", loadingWeight: "1500", widthproduct: "250", availability: "Под заказ" },
+      { model: "УИД-28", voltage: "380/50", power: "65", turbineCount: "1", productivity: "14", ventilation: "10500", loadingWeight: "3500", widthproduct: "350", availability: "Под заказ" },
       { isColSpan: true, text: "Очистка производится со всех сторон" }
     ]
   },
@@ -142,11 +142,11 @@ export const productsData = [
       { title: "Экологичность и безопасность", text: "Не используются химикаты, дробь можно использовать повторно." }
     ],
     tableData: [
-      { model: "УИДТ-20", pipeDiametr: "60-114", flactionFlow: "2*250", productivity: "1-1.5", availability: "Под заказ" },
-      { model: "УИДТ-30", pipeDiametr: "70-300", flactionFlow: "2*250", productivity: "1.5-2", availability: "Под заказ" },
-      { model: "УИДТ-50", pipeDiametr: "150-800", flactionFlow: "2*280", productivity: "1.5-2", availability: "Под заказ" },
-      { model: "УИДТ-100", pipeDiametr: "350-1000", flactionFlow: "4*250", productivity: "1-1.5", availability: "Под заказ" },
-      { model: "УИДТ-150", pipeDiametr: "до 1500", flactionFlow: "2*250", productivity: "1-1.5", availability: "Под заказ" },
+      { model: "УИДТ-20", pipeDiametr: "60-114", flactionFlow: "2*250", productivityMin: "1-1.5", availability: "Под заказ" },
+      { model: "УИДТ-30", pipeDiametr: "70-300", flactionFlow: "2*250", productivityMin: "1.5-2", availability: "Под заказ" },
+      { model: "УИДТ-50", pipeDiametr: "150-800", flactionFlow: "2*280", productivityMin: "1.5-2", availability: "Под заказ" },
+      { model: "УИДТ-100", pipeDiametr: "350-1000", flactionFlow: "4*250", productivityMin: "1-1.5", availability: "Под заказ" },
+      { model: "УИДТ-150", pipeDiametr: "до 1500", flactionFlow: "2*250", productivityMin: "1-1.5", availability: "Под заказ" },
       { isColSpan: true, text: "Очистка производится со всех сторон" }
     ]
   },
@@ -181,9 +181,19 @@ export const productsData = [
       { title: "Точность обработки", text: "Профили обрабатываются равномерно по всей длине и с разных сторон." }
     ],
     tableData: [
-      { model: "УШО-600", profileSize: "до 600 мм", speed: "0.5–2.5 м/мин", turbines: "4*11 кВт", availability: "Под заказ" },
-      { model: "УШО-1000", profileSize: "до 1000 мм", speed: "0.5–2.5 м/мин", turbines: "6*11 кВт", availability: "Под заказ" },
-      { model: "УШО-1500", profileSize: "до 1500 мм", speed: "0.5–2.5 м/мин", turbines: "6*15 кВт", availability: "Под заказ" },
+      { model: "УБ-1500/1000", partsProcessing: "1200*800*12000", sizeWindow: "1500*1000",powerTurbine: "11/15 кВт",turbineCount: "6", powerDust: "14000/15 кВт", feedRate: "0.5-2.0", maximumWeidth: "800", powerIs: "Примерно 80-85кВт", availability: "Под заказ"},
+      { model: "УБ-1500/1200", partsProcessing: "1200*1000*12000", sizeWindow: "1500*1200", powerTurbine: "11/15 кВт", turbineCount: "6", powerDust: "14000/15 кВт", feedRate: "0.5-2.0", maximumWeidth: "800", powerIs: "Примерно 80-85кВт", availability: "Под заказ" },
+      { model: "УБ-1700/1200", partsProcessing: "1400*1000*12000", sizeWindow: "1700*1200", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "800", powerIs: "Примерно 80-85кВт", availability: "Под заказ" },
+      { model: "УБ-1900/1000", partsProcessing: "1600*800*12000", sizeWindow: "1900*1000", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "800", powerIs: "Примерно 110-130кВт", availability: "Под заказ" },
+      { model: "УБ-1900/1200", partsProcessing: "1600*1000*12000", sizeWindow: "1900*1200", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "1000", powerIs: "Примерно 110-130кВт", availability: "Под заказ" },
+      { model: "УБ-2300/1200", partsProcessing: "2000*1000*12000", sizeWindow: "2300*1200", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "1000", powerIs: "Примерно 110-130кВт", availability: "Под заказ" },
+      { model: "УБ-2300/1400", partsProcessing: "2000*1200*12000", sizeWindow: "2300*1400", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "1000", powerIs: "Примерно 110-130кВт", availability: "Под заказ" },
+      { model: "УБ-2500/1000", partsProcessing: "2200*800*12000", sizeWindow: "2500*1000", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "29800/30 кВт", feedRate: "0.5-2.0", maximumWeidth: "1000", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
+      { model: "УБ-2500/1200", partsProcessing: "2200*1000*12000", sizeWindow: "2500*1200", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "29800/30 кВт", feedRate: "0.5-2.0", maximumWeidth: "1500", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
+      { model: "УБ-2500/1400", partsProcessing: "2200*1200*12000", sizeWindow: "2500*1400", powerTurbine: "11/15 кВт", turbineCount: "10", powerDust: "29800/30 кВт", feedRate: "0.5-2.0", maximumWeidth: "1500", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
+      { model: "УБ-2800/1200", partsProcessing: "2500*1000*12000", sizeWindow: "2800*1200", powerTurbine: "11/15 кВт", turbineCount: "10", powerDust: "29800/30 кВт", feedRate: "0.5-2.0", maximumWeidth: "1500", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
+      { model: "УБ-3800/1700", partsProcessing: "3500*1500*12000", sizeWindow: "3800*1700", powerTurbine: "11/15 кВт", turbineCount: "12", powerDust: "36500/37 кВт", feedRate: "0.5-2.0", maximumWeidth: "2000", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
+
       { isColSpan: true, text: "Очистка производится со всех сторон" }
     ]
   },
@@ -216,10 +226,10 @@ export const productsData = [
       { title: "Экономия времени", text: "Одновременная обработка нескольких зон за счёт продуманного расположения турбин." }
     ],
     tableData: [
-      { model: "УБ-3512", voltage: "380/50", power: "10.25", turbineCount: "1", productivity: "2", ventilation: "2000", dimensions: "400", diameter: "1200", availability: "Под заказ" },
-      { model: "УБ-3515", voltage: "380/50", power: "22", turbineCount: "2", productivity: "3", ventilation: "3500", dimensions: "1000", diameter: "1500", availability: "Под заказ" },
-      { model: "УБ-3518", voltage: "380/50", power: "32.85", turbineCount: "2", productivity: "4", ventilation: "3100", dimensions: "1000", diameter: "1800", availability: "Под заказ" },
-      { model: "УБ-3525", voltage: "380/50", power: "45.90", turbineCount: "2", productivity: "5", ventilation: "5200", dimensions: "1000", diameter: "2500", availability: "Под заказ" },
+      { model: "УБ-3512", voltage: "380/50", power: "10.25", turbineCount: "1", productivity: "2", ventilation: "2000", loadStol: "400", diameter: "1200", availability: "Под заказ" },
+      { model: "УБ-3515", voltage: "380/50", power: "22", turbineCount: "2", productivity: "3", ventilation: "3500", loadStol: "1000", diameter: "1500", availability: "Под заказ" },
+      { model: "УБ-3518", voltage: "380/50", power: "32.85", turbineCount: "2", productivity: "4", ventilation: "3100", loadStol: "1000", diameter: "1800", availability: "Под заказ" },
+      { model: "УБ-3525", voltage: "380/50", power: "45.90", turbineCount: "2", productivity: "5", ventilation: "5200", loadStol: "1000", diameter: "2500", availability: "Под заказ" },
       { isColSpan: true, text: "Очистка производится не со всех сторон" }
     ]
   },
