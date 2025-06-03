@@ -1,4 +1,5 @@
-import { faqData } from "../data/productData"
+import { faqData } from "../data/faqData"
+import { useState } from "react";
 
 const Faq = () => {
   const [activeIndex, setActiveIndex] = useState(null);

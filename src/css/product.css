@@ -70,25 +70,36 @@ body {
   display: flex;
   transition: transform 0.5s ease;
   justify-content: space-between;
-}
-  .carousel-item {
-    max-width: 30%;
-    width: 30%;
-    height: auto;
-    padding: 10px;
-  }
-  .carousel-item.portrait {
+
+  .page {
+    width: 100%;
+    max-width: 100%;
     min-width: 100%;
     height: 500px;
-    padding: 10px;
-  }
+    display: flex;
+    justify-content: space-around;
 
-.carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  cursor: pointer;
-  border-radius: 10px;
+    .carousel-item {
+      max-width: 30%;
+      width: 30%;
+      height: 100%;
+      padding: 10px;
+
+      &.portrait {
+        min-width: 100%;
+        height: 500px;
+        padding: 10px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        cursor: pointer;
+        border-radius: 10px;
+      }
+    }
+  }
 }
 
 .carousel-arrow {
@@ -132,12 +143,7 @@ body {
   object-fit: contain;
 }
 
-.box_mufelnye_pechi {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 18px;
-}
-.box_mufelnye_pechi-table-model {
+.table-model {
   max-width: 100%;
   overflow: scroll;
   margin: 0 auto;
@@ -368,7 +374,7 @@ table.iksweb tr:hover td{color:#000000;cursor:default;} */
 }
 
 .faq-question {
-  font-weight: bold;
+  font-weight: 450;
   font-size: 20px;
   color: #01000a;
   cursor: pointer;
@@ -379,16 +385,23 @@ table.iksweb tr:hover td{color:#000000;cursor:default;} */
 }
 
 .faq-answer {
-  padding: 0 20px;
+  box-sizing: content-box;
+  padding: 0 20px 20px  20px;
   max-height: 0;
   overflow: hidden;
   font-size: 16px;
   line-height: 1.5;
   transition: max-height 0.4s ease, padding 0.3s ease;
 }
+.faq-answer::before {
+  display: flex;
+  content: '';
+  border: 1px solid rgba(0, 0, 0, 0.168);
+  width: 100%;
+  height: 1px;
+}
 
 .faq-item.active .faq-answer {
-  padding: 15px 20px;
   max-height: 300px;
 }
 

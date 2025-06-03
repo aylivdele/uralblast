@@ -5,6 +5,7 @@ import Catalog from "./components/Catalog";
 import Apps from "./components/Services";
 import Form from "./components/ContactForm"
 import Benefits from "./components/Advantages"
+import Faq from "./components/Faq"
 import Footer from './components/Footer';
 import ProductPage from './components/ProductPage';
 import PartPage from './components/PartPage';
@@ -14,6 +15,7 @@ import NewsPage from './components/NewsPage';
 import SideButton from './components/SideButtons';
 import useSrollToTop from './hooks/scrollToTop.hook';
 import useAnimations from './hooks/useAnimations.hook';
+import Turbine from './components/Turbine';
 
 function App() {
 
@@ -23,7 +25,7 @@ function App() {
   return (
     <div className="app">
       <SideButton/>
-       <Navbar />
+      <Navbar />
      
        
       <Routes>
@@ -35,6 +37,7 @@ function App() {
               <Apps />
               <Form />
               <Benefits />
+              <Faq />
             </div>
           </>
         } />
@@ -44,10 +47,11 @@ function App() {
         <Route path="/products/:id" element={<ProductPage />} />
         <Route path="/parts" element={<Catalog id='parts' data={partsData} link={'/parts'} title={'Запчасти'}/>} />
         <Route path="/parts/:id" element={<PartPage />} />
+        <Route path="/turbine" element={<Turbine />} />
 
         {/* <Route path="/news" element={<NewsPage />} /> */}
       </Routes>
-       <Footer />
+      <Footer />
 
     </div>
   );

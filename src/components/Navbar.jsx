@@ -5,10 +5,6 @@ import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const onBurgerClick = useCallback((e) => {
-    e.preventDefault();
-    setMenuOpen(!menuOpen);
-  }, [menuOpen]);
 
   return (
     <div className="bg-blur navbar">
@@ -21,7 +17,7 @@ const Navbar = () => {
             <HashLink smooth to="/#" className="text-gray-300 hover:text-white">Главная</HashLink>
           </li>
           <li>
-            <HashLink smooth to="/#products" className="text-gray-300 hover:text-white">Продукция</HashLink>
+            <Link to="/products" className="text-gray-300 hover:text-white">Продукция</Link>
           </li>
           <li>
             <HashLink smooth to="/#services" className="text-gray-300 hover:text-white">Услуги</HashLink>

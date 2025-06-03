@@ -1,8 +1,20 @@
 // ProductTemplate.jsx
 import Breadcrumbs from "./Breadcrumbs";
 import ImageCarousel from "./ImageCarousel";
-import Faq from "./Faq"
 
+const tableColumnNamesMap = {
+  model: 'Модель',
+  voltage: 'Напряжение В/Гц',
+  power: 'Мощность кВт',
+  telpherCount: 'К-во тельферов',
+  turbineCount: 'К-во турбин',
+  load: 'Нагрузка на тельфер, кг',
+  productivity: 'Расчетная производительность т/час',
+  ventilation: 'Производительность вентиляции, м3/час',
+  dimensions: 'Диаметр очищаемого изделия, длина/высота, мм',
+  availability: 'Наличие',
+  widthproduct: '????????????????????'
+}
 
 const AdvantagesSection = ({ advantages }) => (
   <section style={{ margin: "40px 0" }} className="appear">
@@ -52,12 +64,12 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
       <AdvantagesSection advantages={advantages} />
      
 
-      <div className="box_mufelnye_pechi-table-model appear">
+      <div className="table-model appear">
         <table className="iksweb_l">
           <thead>
             <tr>
               {Object.keys(tableData[0]).filter(key => key !== "isColSpan" && key !== "text").map((key, index) => (
-                <th className="table_sm-01" key={index}>{key}</th>
+                <th className="table_sm-01" key={index}>{tableColumnNamesMap[key] ?? key}</th>
               ))}
             </tr>
           </thead>
@@ -70,7 +82,7 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
               ) : (
                 <tr key={index}>
                   {Object.values(row).map((val, i) => (
-                    <td className="table_sm-01" key={i}>{val}</td>
+                    <td className="table_sm-01" key={i} rowSpan={val.rowspan} colSpan={ val.colspan}>{val.value ?? val}</td>
                   ))}
                 </tr>
               )

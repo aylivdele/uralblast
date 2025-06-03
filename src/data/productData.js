@@ -30,28 +30,7 @@ export const productsData = [
       { title: "Безопасность", text: "Автоматизация процессов, работа в закрытой камере, управление одним оператором." },
       { title: "Производительность", text: "До 6 т/час за счёт параллельной обработки несколькими тельферами (грузоподъёмность до 1000 кг каждый)." }
     ],
-    tableData: [
-      { model: "УИД-376", voltage: "380/50", power: "24.9", telpherCount: "1", turbineCount: "2*7.5 кВт", load: "500", productivity: "6", ventilation: "5200", dimensions: "800/1200", availability: "Под заказ" },
-      { model: "УИД-376Е", voltage: "380/50", power: "24.9", telpherCount: "2", turbineCount: "2*7.5 кВт", load: "1000", productivity: "6", ventilation: "5200", dimensions: "800/1200", availability: "Под заказ" },
-      { model: "УИД-378", voltage: "380/50", power: "41.35", telpherCount: "1", turbineCount: "2*11 кВт", load: "2000", productivity: "12", ventilation: "10500", dimensions: "1000/1500", availability: "Под заказ" },
-      { model: "УИД-378Е", voltage: "380/50", power: "41.35", telpherCount: "2", turbineCount: "2*11 кВт", load: "1000", productivity: "12", ventilation: "10500", dimensions: "1000/1500", availability: "Под заказ" },
-      { model: "УИД-3710", voltage: "380/50", power: "49.35", telpherCount: "1", turbineCount: "2*15 кВт", load: "2000", productivity: "12", ventilation: "11000", dimensions: "1200/1600", availability: "Под заказ" },
-      { model: "УИД-3710Е", voltage: "380/50", power: "50", telpherCount: "2", turbineCount: "2*15 кВт", load: "5000", productivity: "30", ventilation: "11000", dimensions: "1200/1600", availability: "Под заказ" },
-      { model: "УИД-3720", voltage: "380/50", power: "68", telpherCount: "1", turbineCount: "3*15 кВт", load: "5000", productivity: "30", ventilation: "15000", dimensions: "1500/2000", availability: "Под заказ" },
-      { model: "УИД-3720Е", voltage: "380/50", power: "68", telpherCount: "2", turbineCount: "3*15 кВт", load: "2000", productivity: "30", ventilation: "15000", dimensions: "1500/2000", availability: "Под заказ" },
-      { model: "УИД-3750", voltage: "380/50", power: "102.2", telpherCount: "1", turbineCount: "4*15 кВт", load: "10000", productivity: "60", ventilation: "18000", dimensions: "2000/2500", availability: "Под заказ" },
-      { isColSpan: true, text: "Очистка производится со всех сторон" }
-    ],
-    faqData: [
-      {question: 'Что делает ваши установки уникальными?', answer:'lorem ipsum'},
-      {question: 'Какие преимущества перед конкурентами?', answer:'lorem ipsum'},
-      {question: 'Как ваше оборудование экономит бюджет?', answer:'lorem ipsum'},
-      {question: 'Есть ли гарантия на оборудование?', answer:'lorem ipsum'},
-      {question: 'Можно ли адаптировать установку под наши задачи?', answer:'lorem ipsum'},
-      {question: 'Как обеспечивается безопасность операторов?', answer:'lorem ipsum'},
-      {question: 'Как быстро окупится оборудование?', answer:'lorem ipsum'},
-      {question: 'Как ваши установки влияют на экологию?', answer:'lorem ipsum'},
-    ]
+    tableData: [{"model":"УИД-376","voltage":{"rowspan":"9","value":"380/50"},"power":{"rowspan":"2","value":"24.9"},"telpherCount":"1","turbineCount":{"rowspan":"2","value":"2*7.5 кВт"},"load":"500","productivity":{"rowspan":"2","value":"6"},"ventilation":{"rowspan":"2","value":"5200"},"dimensions":{"rowspan":"2","value":"800/1200"},"availability":{"rowspan":"9","value":"Под заказ"}},{"model":"УИД-376Е","telpherCount":"2","load":"1000"},{"model":"УИД-378","power":{"rowspan":"2","value":"41.35"},"telpherCount":"1","turbineCount":{"rowspan":"2","value":"2*11 кВт"},"load":"2000","productivity":{"rowspan":"3","value":"12"},"ventilation":{"rowspan":"2","value":"10500"},"dimensions":{"rowspan":"2","value":"1000/1500"}},{"model":"УИД-378Е","telpherCount":"2","load":"1000"},{"model":"УИД-3710","power":"49.35","telpherCount":"1","turbineCount":{"rowspan":"2","value":"2*15 кВт"},"load":"2000","ventilation":{"rowspan":"2","value":"11000"},"dimensions":{"rowspan":"2","value":"1200/1600"}},{"model":"УИД-3710Е","power":"50","telpherCount":"2","load":{"rowspan":"2","value":"5000"},"productivity":{"rowspan":"3","value":"30"}},{"model":"УИД-3720","power":{"rowspan":"2","value":"68"},"telpherCount":"1","turbineCount":{"rowspan":"2","value":"3*15 кВт"},"ventilation":{"rowspan":"2","value":"15000"},"dimensions":{"rowspan":"2","value":"1500/2000"}},{"model":"УИД-3720Е","telpherCount":"2","load":"2000"},{"model":"УИД-3750","power":"102.2","telpherCount":"1","turbineCount":"4*15 кВт","load":"10000","productivity":"60","ventilation":"18000","dimensions":"2000/2500"},{"isColSpan":true,"text":"Очистка производится со всех сторон"}]
   },
     {
     id: "barabanniy-tip",

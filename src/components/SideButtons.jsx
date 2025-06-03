@@ -13,7 +13,7 @@ const SideButtons = () => {
       </div>
       <div className='side-button' ref={phoneRef}>
         <img src='/images/phone-call.svg'/>
-        <a href='tel:+7999123456'>+79193397235</a>
+        <a href='tel:+79193397235'>+79193397235</a>
       </div>
       <button className='side-text'>
         <HashLink smooth to="/#service-form" alt='Контакты'>Связаться с нами!</HashLink>
