@@ -524,6 +524,15 @@ table.iksweb tr:hover td{color:#000000;cursor:default;} */
   .contact-form {
     padding: 15px;
   }
+  .top-section {
+    flex-direction: column;
+  }
+
+  .image-block {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1/1;
+  }
 }
 
 @media (max-width: 768px) {
