@@ -5,11 +5,10 @@
     margin-top: 10px;
   }
 
-  .block-otchety {
+  /* .block-otchety {
     margin-top: 50px;
   }
 
-  /* Шапка */
   .header {
     text-align: center;
     margin-bottom: 40px;
@@ -45,7 +44,6 @@
     margin: 0;
   }
 
-  /* Блок отчёта */
   .report-item {
     margin: 40px 0;
     display: flex;
@@ -61,7 +59,6 @@
     flex: 1;
   }
 
-  /* Карусель */
   .carousel {
     position: relative;
     width: 391px;
@@ -116,7 +113,6 @@
 
   .dot.active { background: white; }
 
-  /* Модальное окно */
   .modal {
     position: fixed;
     top: 0;
@@ -136,7 +132,6 @@
     object-fit: contain;
   }
 
-  /* Кнопка загрузки */
   .load-more {
     display: block;
     margin: 40px auto;
@@ -149,7 +144,6 @@
     font-size: 16px;
   }
 
-  /* Мобильная версия */
   @media (max-width: 768px) {
     .container {
       padding: 10px;
@@ -172,4 +166,4 @@
     .back-button {
       margin-bottom: 15px;
     }
-  }
+  } */
