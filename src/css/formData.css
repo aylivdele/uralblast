@@ -27,7 +27,7 @@
 .contact-block-form input:focus,
 .contact-block-form textarea:focus {
   outline: none;
-  border-color: #2196f3;
+  border-color: #04b101;
   box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
 }
 
@@ -55,7 +55,7 @@
 }
 
 .file-upload:hover {
-  border-color: #2196f3;
+  border-color: #04b101;
   background: rgba(33, 150, 243, 0.05);
 }
 
@@ -65,7 +65,7 @@
 }
 
 .contact-block-form button {
-  background: #2196f3;
+  background: #04b101;
   color: white;
   font-weight: 500;
   border: none;
@@ -79,7 +79,7 @@
 }
 
 .contact-block-form button:hover {
-  background: #1976d2;
+  background: #03be00;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
 }

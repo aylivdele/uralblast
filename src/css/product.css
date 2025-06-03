@@ -150,7 +150,7 @@ body {
 }
 
 .container_modification_mufel-pech {
-  max-width: 1200px;
+  /* max-width: 1200px; */
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -195,7 +195,7 @@ table.iksweb_l th {
   font-weight: normal;
   font-size: 15px;
   color: #ffffff;
-  background-color: #0447b1;
+  background-color: #04b115;
 }
 table.iksweb_l td {
   font-size: 14px;
@@ -298,7 +298,7 @@ table.iksweb tr:hover td{color:#000000;cursor:default;} */
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #2196f3;
+  border-color: #04b101;
   box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
 }
 
@@ -338,7 +338,7 @@ table.iksweb tr:hover td{color:#000000;cursor:default;} */
 
 /* Стили кнопки */
 .contact-form button {
-  background: #2196f3;
+  background: #04b101;
   color: white;
   font-weight: 500;
   border: none;
@@ -352,7 +352,7 @@ table.iksweb tr:hover td{color:#000000;cursor:default;} */
 }
 
 .contact-form button:hover {
-  background: #1976d2;
+  background: #049901;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
 }

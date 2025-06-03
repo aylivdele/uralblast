@@ -6,7 +6,11 @@ h2 {
   text-align: center;
   font-size: 25px !important; 
   margin: 40px 0 !important;
-  font-weight: 500 !important;
+  font-weight: 600 !important;
+}
+
+.mg-7 {
+  margin: 3px 0 !important;
 }
 
 h3 {
@@ -51,7 +55,7 @@ body {
     display: flex;
     gap: 5px;
     color: white;
-    background: #044fac;
+    background: #04b101;
     padding: 10px;
     border-radius: 10px 0 0 10px;
     box-shadow: -1px 4px 14px 1px #000000b4;
@@ -145,8 +149,8 @@ body {
 }
 .service-item.active,
 .service-item:hover {
-  background-color: #f0f8ff;
-  border-color: #0077ff;
+  background-color: #dcf9e68b;
+  border-color: #04b101;
 }
 
 .service-item .text {
@@ -220,7 +224,7 @@ body {
 .contact-form-advantes button {
   padding: 12px 20px;
   font-size: 16px;
-  background: #0047ff;
+  background: #04b101;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -328,6 +332,10 @@ body {
   }
 
   .advantage-card__title {
+    font-size: 16px;
+  }
+
+  .breadcrumbs {
     font-size: 16px;
   }
 }

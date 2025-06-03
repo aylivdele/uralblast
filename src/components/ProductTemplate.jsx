@@ -1,6 +1,8 @@
 // ProductTemplate.jsx
 import Breadcrumbs from "./Breadcrumbs";
 import ImageCarousel from "./ImageCarousel";
+import Faq from "./Faq"
+
 
 const AdvantagesSection = ({ advantages }) => (
   <section style={{ margin: "40px 0" }} className="appear">
@@ -16,7 +18,9 @@ const AdvantagesSection = ({ advantages }) => (
   </section>
 );
 
-const ProductTemplate = ({ title, image, description, advantages, tableData, carouselImages }) => {
+
+
+const ProductTemplate = ({ title, image, description, advantages, tableData, carouselImages, faqData, constryctionTitle, constryctionDescription, applicationTitle, applicationDescription,  }) => {
   
 
   return (
@@ -31,12 +35,22 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
           {description.map((para, index) => (
             <p key={index}>{para}</p>
           ))}
+          <h2 className="mg-2 md-9 mg-7">{constryctionTitle}</h2>
+          {constryctionDescription.map((para, index) => (
+            <p key={index}>{para}</p>
+          ))}
+          <h2 className="mg-2 md-9 mg-7">{applicationTitle}</h2>
+          {applicationDescription.map((para, index) => (
+            <p key={index}>{para}</p>
+          ))}
         </div>
       </div>
+
 
       <ImageCarousel images={carouselImages}/>
 
       <AdvantagesSection advantages={advantages} />
+     
 
       <div className="box_mufelnye_pechi-table-model appear">
         <table className="iksweb_l">
@@ -64,6 +78,7 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
           </tbody>
         </table>
       </div>
+      
     </div>
   );
 };
