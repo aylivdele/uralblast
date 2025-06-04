@@ -58,7 +58,7 @@ const AdvantagesSection = ({ advantages }) => (
 const ProductTemplate = ({ title, image, description, advantages, tableHeader, tableData, carouselImages, constryctionTitle, constryctionDescription, applicationTitle, applicationDescription, titleBlockTurbine, descriptionBlockTurbine }) => {
 
   return (
-    <div className="container" style={{ overflow: 'hidden'}}>
+    <div className="container_event-product" style={{ overflow: 'hidden'}}>
       <Breadcrumbs name={title}/>
       <div className="top-section">
         <div className="image-block from-left">

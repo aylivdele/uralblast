@@ -27,7 +27,7 @@ const PartsTemplate = ({name, description, image}) => {
   };
 
   return (
-    <div className="container parts">
+    <div className="container_event-product parts">
       <Breadcrumbs name={name}/>
       {/* Верхний блок */}
       <div className="top-section from-left">
