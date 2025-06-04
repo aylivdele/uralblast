@@ -58,7 +58,7 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
   
 
   return (
-    <div className="container" style={{ overflow: 'hidden'}}>
+    <div className="container_event-product" style={{ overflow: 'hidden'}}>
       <Breadcrumbs name={title}/>
       <div className="top-section">
         <div className="image-block from-left">
