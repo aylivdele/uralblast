@@ -11,11 +11,9 @@ import ProductPage from './components/ProductPage';
 import PartPage from './components/PartPage';
 import { productsData } from './data/productData';
 import { partsData } from './data/partsData';
-import NewsPage from './components/NewsPage';
 import SideButton from './components/SideButtons';
 import useSrollToTop from './hooks/scrollToTop.hook';
 import useAnimations from './hooks/useAnimations.hook';
-import Turbine from './components/Turbine';
 
 function App() {
 
@@ -47,7 +45,6 @@ function App() {
         <Route path="/products/:id" element={<ProductPage />} />
         <Route path="/parts" element={<Catalog id='parts' data={partsData} link={'/parts'} title={'Запчасти'}/>} />
         <Route path="/parts/:id" element={<PartPage />} />
-        <Route path="/turbine" element={<Turbine />} />
 
         {/* <Route path="/news" element={<NewsPage />} /> */}
       </Routes>

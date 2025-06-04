@@ -65,19 +65,7 @@ export const productsData = [
       { title: "Безопасность", text: "Работа в закрытой камере, управление одним оператором." },
       { title: "Универсальность", text: "Обработка деталей от мелких до крупных (до 300 кг)." }
     ],
-    tableData: [
-      { model: "УИД-3110", voltage: "380/50", power: "9.7", turbineCount: "1", productivity: "1", ventilation: "800", loadingWeight: "300", widthproduct: "15", availability: "Под заказ" },
-      { model: "УИД-3113", voltage: "380/50", power: "11.1", turbineCount: "1", productivity: "2", ventilation: "2000", loadingWeight: "600", widthproduct: "30", availability: "Под заказ" },
-      { model: "УИД-320", voltage: "380/50", power: "7", turbineCount: "1*4кВт", productivity: "0.3", ventilation: "1400", loadingWeight: "50", widthproduct: "5", availability: "Под заказ" },
-      { model: "УИД-322", voltage: "380/50", power: "6.4", turbineCount: "1*4кВт", productivity: "0.5", ventilation: "1600", loadingWeight: "80", widthproduct: "10", availability: "Под заказ" },
-      { model: "УИД-324", voltage: "380/50", power: "10.85", turbineCount: "1*7.5", productivity: "0.7", ventilation: "2000", loadingWeight: "100", widthproduct: "10", availability: "Под заказ" },
-      { model: "УИД-326", voltage: "380/50", power: "13.25", turbineCount: "2*7.5кВт", productivity: "1.2", ventilation: "2500", loadingWeight: "200", widthproduct: "10", availability: "Под заказ" },
-      { model: "УИД-3210", voltage: "380/50", power: "28.45", turbineCount: "1*15кВт", productivity: "2.5", ventilation: "4200", loadingWeight: "500", widthproduct: "30", availability: "Под заказ" },
-      { model: "УИД-3220", voltage: "380/50", power: "46", turbineCount: "2*11кВт", productivity: "5", ventilation: "5600", loadingWeight: "1000", widthproduct: "50", availability: "Под заказ" },
-      { model: "УИД-15", voltage: "380/50", power: "50", turbineCount: "1", productivity: "6", ventilation: "7500", loadingWeight: "1500", widthproduct: "250", availability: "Под заказ" },
-      { model: "УИД-28", voltage: "380/50", power: "65", turbineCount: "1", productivity: "14", ventilation: "10500", loadingWeight: "3500", widthproduct: "350", availability: "Под заказ" },
-      { isColSpan: true, text: "Очистка производится со всех сторон" }
-    ]
+    tableData: [{"model":"УИД-3110","voltage":{"rowspan":"10","value":"380/50"},"power":"9.7","turbineCount":{"rowspan":"2","value":"1"},"productivity":"1","ventilation":"800","loadingWeight":"300","widthproduct":"15","availability":{"rowspan":"10","value":"Под заказ"}},{"model":"УИД-3113","power":"11.1","productivity":"2","ventilation":"2000","loadingWeight":"600","widthproduct":"30"},{"model":"УИД-320","power":"7","turbineCount":{"rowspan":"2","value":"1*4кВт"},"productivity":"0.3","ventilation":"1400","loadingWeight":"50","widthproduct":"5"},{"model":"УИД-322","power":"6.4","productivity":"0.5","ventilation":"1600","loadingWeight":"80","widthproduct":{"rowspan":"3","value":"10"}},{"model":"УИД-324","power":"10.85","turbineCount":"1*7.5","productivity":"0.7","ventilation":"2000","loadingWeight":"100"},{"model":"УИД-326","power":"13.25","turbineCount":"2*7.5кВт","productivity":"1.2","ventilation":"2500","loadingWeight":"200"},{"model":"УИД-3210","power":"28.45","turbineCount":"1*15кВт","productivity":"2.5","ventilation":"4200","loadingWeight":"500","widthproduct":"30"},{"model":"УИД-3220","power":"46","turbineCount":"2*11кВт","productivity":"5","ventilation":"5600","loadingWeight":"1000","widthproduct":"50"},{"model":"УИД-15","power":"50","turbineCount":{"rowspan":"2","value":"1"},"productivity":"6","ventilation":"7500","loadingWeight":"1500","widthproduct":"250"},{"model":"УИД-28","power":"65","productivity":"14","ventilation":"10500","loadingWeight":"3500","widthproduct":"350"},{"isColSpan":true,"text":"Очистка производится со всех сторон"}],
   },
     {
     id: "prohodnoy-tip",
@@ -106,13 +94,7 @@ export const productsData = [
       { title: "Минимизация ручного труда", text: "Автоматизированная загрузка, транспортировка и выгрузка." },
       { title: "Компактность и адаптивность", text: "Занимает меньше места, легко встраивается в производственные линии." }
     ],
-    tableData: [
-      { model: "УБ-383", volume: "600*1400", consumption: "4*260", availability: "Под заказ" },
-      { model: "УБ-384", volume: "800*1500", consumption: "6*260", availability: "Под заказ" },
-      { model: "УБ-485", volume: "900*1400", consumption: "4*260", availability: "Под заказ" },
-      { model: "УБ-4810", volume: "1000*1500", consumption: "6*260", availability: "Под заказ" },
-      { isColSpan: true, text: "Очистка производится со всех сторон" }
-    ]
+    tableData: [{"model":"УБ-383","volume":"600*1400","consumption":"4*260","availability":{"rowspan":"4","value":"Под заказ"}},{"model":"УБ-384","volume":"800*1500","consumption":"6*260"},{"model":"УБ-485","volume":"900*1400","consumption":"4*260"},{"model":"УБ-4810","volume":"1000*1500","consumption":"6*260"},{"isColSpan":true,"text":"Очистка производится со всех сторон"}]
   },
     {
     id: "ochistka-trub",
@@ -141,14 +123,7 @@ export const productsData = [
       { title: "Равномерность обработки", text: "Однородное воздействие на всю поверхность трубы без пропусков." },
       { title: "Экологичность и безопасность", text: "Не используются химикаты, дробь можно использовать повторно." }
     ],
-    tableData: [
-      { model: "УИДТ-20", pipeDiametr: "60-114", flactionFlow: "2*250", productivityMin: "1-1.5", availability: "Под заказ" },
-      { model: "УИДТ-30", pipeDiametr: "70-300", flactionFlow: "2*250", productivityMin: "1.5-2", availability: "Под заказ" },
-      { model: "УИДТ-50", pipeDiametr: "150-800", flactionFlow: "2*280", productivityMin: "1.5-2", availability: "Под заказ" },
-      { model: "УИДТ-100", pipeDiametr: "350-1000", flactionFlow: "4*250", productivityMin: "1-1.5", availability: "Под заказ" },
-      { model: "УИДТ-150", pipeDiametr: "до 1500", flactionFlow: "2*250", productivityMin: "1-1.5", availability: "Под заказ" },
-      { isColSpan: true, text: "Очистка производится со всех сторон" }
-    ]
+    tableData: [{"model":"УИДТ-20","pipeDiametr":"60-114","flactionFlow":{"rowspan":"2","value":"2*250"},"productivityMin":"1-1.5","availability":{"rowspan":"5","value":"Под заказ"}},{"model":"УИДТ-30","pipeDiametr":"70-300","productivityMin":{"rowspan":"2","value":"1.5-2"}},{"model":"УИДТ-50","pipeDiametr":"150-800","flactionFlow":"2*280"},{"model":"УИДТ-100","pipeDiametr":"350-1000","flactionFlow":"4*250","productivityMin":{"rowspan":"2","value":"1-1.5"}},{"model":"УИДТ-150","pipeDiametr":"до 1500","flactionFlow":"2*250"},{"isColSpan":true,"text":"Очистка производится со всех сторон"}]
   },
   {
     id: "ochistka-svelera",
@@ -180,22 +155,7 @@ export const productsData = [
       { title: "Безопасность", text: "Полная защита оператора, система пылеудаления, безопасность работы." },
       { title: "Точность обработки", text: "Профили обрабатываются равномерно по всей длине и с разных сторон." }
     ],
-    tableData: [
-      { model: "УБ-1500/1000", partsProcessing: "1200*800*12000", sizeWindow: "1500*1000",powerTurbine: "11/15 кВт",turbineCount: "6", powerDust: "14000/15 кВт", feedRate: "0.5-2.0", maximumWeidth: "800", powerIs: "Примерно 80-85кВт", availability: "Под заказ"},
-      { model: "УБ-1500/1200", partsProcessing: "1200*1000*12000", sizeWindow: "1500*1200", powerTurbine: "11/15 кВт", turbineCount: "6", powerDust: "14000/15 кВт", feedRate: "0.5-2.0", maximumWeidth: "800", powerIs: "Примерно 80-85кВт", availability: "Под заказ" },
-      { model: "УБ-1700/1200", partsProcessing: "1400*1000*12000", sizeWindow: "1700*1200", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "800", powerIs: "Примерно 80-85кВт", availability: "Под заказ" },
-      { model: "УБ-1900/1000", partsProcessing: "1600*800*12000", sizeWindow: "1900*1000", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "800", powerIs: "Примерно 110-130кВт", availability: "Под заказ" },
-      { model: "УБ-1900/1200", partsProcessing: "1600*1000*12000", sizeWindow: "1900*1200", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "1000", powerIs: "Примерно 110-130кВт", availability: "Под заказ" },
-      { model: "УБ-2300/1200", partsProcessing: "2000*1000*12000", sizeWindow: "2300*1200", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "1000", powerIs: "Примерно 110-130кВт", availability: "Под заказ" },
-      { model: "УБ-2300/1400", partsProcessing: "2000*1200*12000", sizeWindow: "2300*1400", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "21500/22 кВт", feedRate: "0.5-2.0", maximumWeidth: "1000", powerIs: "Примерно 110-130кВт", availability: "Под заказ" },
-      { model: "УБ-2500/1000", partsProcessing: "2200*800*12000", sizeWindow: "2500*1000", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "29800/30 кВт", feedRate: "0.5-2.0", maximumWeidth: "1000", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
-      { model: "УБ-2500/1200", partsProcessing: "2200*1000*12000", sizeWindow: "2500*1200", powerTurbine: "11/15 кВт", turbineCount: "8", powerDust: "29800/30 кВт", feedRate: "0.5-2.0", maximumWeidth: "1500", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
-      { model: "УБ-2500/1400", partsProcessing: "2200*1200*12000", sizeWindow: "2500*1400", powerTurbine: "11/15 кВт", turbineCount: "10", powerDust: "29800/30 кВт", feedRate: "0.5-2.0", maximumWeidth: "1500", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
-      { model: "УБ-2800/1200", partsProcessing: "2500*1000*12000", sizeWindow: "2800*1200", powerTurbine: "11/15 кВт", turbineCount: "10", powerDust: "29800/30 кВт", feedRate: "0.5-2.0", maximumWeidth: "1500", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
-      { model: "УБ-3800/1700", partsProcessing: "3500*1500*12000", sizeWindow: "3800*1700", powerTurbine: "11/15 кВт", turbineCount: "12", powerDust: "36500/37 кВт", feedRate: "0.5-2.0", maximumWeidth: "2000", powerIs: "Примерно 125-135кВт", availability: "Под заказ" },
-
-      { isColSpan: true, text: "Очистка производится со всех сторон" }
-    ]
+    tableData: [{"model":"УБ-1500/1000","partsProcessing":"1200*800*12000","sizeWindow":"1500*1000","powerTurbine":{"rowspan":"12","value":"11/15 кВт"},"turbineCount":{"rowspan":"2","value":"6"},"powerDust":{"rowspan":"2","value":"14000/15 кВт"},"feedRate":{"rowspan":"12","value":"0.5-2.0"},"maximumWeidth":{"rowspan":"4","value":"800"},"powerIs":{"rowspan":"3","value":"Примерно 80-85кВт"},"availability":{"rowspan":"12","value":"Под заказ"}},{"model":"УБ-1500/1200","partsProcessing":"1200*1000*12000","sizeWindow":"1500*1200"},{"model":"УБ-1700/1200","partsProcessing":"1400*1000*12000","sizeWindow":"1700*1200","turbineCount":{"rowspan":"7","value":"8"},"powerDust":{"rowspan":"5","value":"21500/22 кВт"}},{"model":"УБ-1900/1000","partsProcessing":"1600*800*12000","sizeWindow":"1900*1000","powerIs":{"rowspan":"4","value":"Примерно 110-130кВт"}},{"model":"УБ-1900/1200","partsProcessing":"1600*1000*12000","sizeWindow":"1900*1200","maximumWeidth":{"rowspan":"4","value":"1000"}},{"model":"УБ-2300/1200","partsProcessing":"2000*1000*12000","sizeWindow":"2300*1200"},{"model":"УБ-2300/1400","partsProcessing":"2000*1200*12000","sizeWindow":"2300*1400"},{"model":"УБ-2500/1000","partsProcessing":"2200*800*12000","sizeWindow":"2500*1000","powerDust":{"rowspan":"4","value":"29800/30 кВт"},"powerIs":{"rowspan":"5","value":"Примерно 125-135кВт"}},{"model":"УБ-2500/1200","partsProcessing":"2200*1000*12000","sizeWindow":"2500*1200","maximumWeidth":{"rowspan":"3","value":"1500"}},{"model":"УБ-2500/1400","partsProcessing":"2200*1200*12000","sizeWindow":"2500*1400","turbineCount":{"rowspan":"2","value":"10"}},{"model":"УБ-2800/1200","partsProcessing":"2500*1000*12000","sizeWindow":"2800*1200"},{"model":"УБ-3800/1700","partsProcessing":"3500*1500*12000","sizeWindow":"3800*1700","turbineCount":"12","powerDust":"36500/37 кВт","maximumWeidth":"2000"},{"isColSpan":true,"text":"Очистка производится со всех сторон"}]
   },
     {
     id: "vraschayushchiy-stol",
@@ -225,13 +185,7 @@ export const productsData = [
       { title: "Безопасность", text: "Соответствие международным стандартам, защита оператора от выброса абразива." },
       { title: "Экономия времени", text: "Одновременная обработка нескольких зон за счёт продуманного расположения турбин." }
     ],
-    tableData: [
-      { model: "УБ-3512", voltage: "380/50", power: "10.25", turbineCount: "1", productivity: "2", ventilation: "2000", loadStol: "400", diameter: "1200", availability: "Под заказ" },
-      { model: "УБ-3515", voltage: "380/50", power: "22", turbineCount: "2", productivity: "3", ventilation: "3500", loadStol: "1000", diameter: "1500", availability: "Под заказ" },
-      { model: "УБ-3518", voltage: "380/50", power: "32.85", turbineCount: "2", productivity: "4", ventilation: "3100", loadStol: "1000", diameter: "1800", availability: "Под заказ" },
-      { model: "УБ-3525", voltage: "380/50", power: "45.90", turbineCount: "2", productivity: "5", ventilation: "5200", loadStol: "1000", diameter: "2500", availability: "Под заказ" },
-      { isColSpan: true, text: "Очистка производится не со всех сторон" }
-    ]
+    tableData: [{"model":"УБ-3512","voltage":{"rowspan":"4","value":"380/50"},"power":"10.25","turbineCount":"1","productivity":"2","ventilation":"2000","loadStol":"400","diameter":"1200","availability":{"rowspan":"4","value":"Под заказ"}},{"model":"УБ-3515","power":"22","turbineCount":{"rowspan":"3","value":"2"},"productivity":"3","ventilation":"3500","loadStol":{"rowspan":"3","value":"1000"},"diameter":"1500"},{"model":"УБ-3518","power":"32.85","productivity":"4","ventilation":"3100","diameter":"1800"},{"model":"УБ-3525","power":"45.90","productivity":"5","ventilation":"5200","diameter":"2500"},{"isColSpan":true,"text":"Очистка производится не со всех сторон"}]
   },
     {
     id: "lentochniy-konveer",
@@ -261,13 +215,7 @@ export const productsData = [
       { title: "Универсальность", text: "Установка подходит для обработки небольших изделий, которые фиксируются на сетке без риска потери или повреждения." },
       { title: "Эффективность", text: "Сетчатая конструкция конвейера обеспечивает автоматический сбор отработанной дроби, окалины и пыли." }
     ],
-    tableData: [
-      { model: "УБ-60", voltage: "380/50", conveyorWidth: "600", speed: "0.5-4", shot: "4*120", availability: "Под заказ" },
-      { model: "УБ-80", voltage: "380/50", conveyorWidth: "800", speed: "0.5-4", shot: "4*120", availability: "Под заказ" },
-      { model: "УБ-100", voltage: "380/50", conveyorWidth: "1000", speed: "0.5-4", shot: "4*180", availability: "Под заказ" },
-      { model: "УБ-120", voltage: "380/50", conveyorWidth: "1200", speed: "0.5-4", shot: "4*260", availability: "Под заказ" },
-      { isColSpan: true, text: "Очистка производится не со всех сторон" }
-    ]
+    tableData: [{"model":"УБ-60","voltage":{"rowspan":"4","value":"380/50"},"conveyorWidth":"600","speed":{"rowspan":"4","value":"0.5-4"},"shot":{"rowspan":"2","value":"4*120"},"availability":{"rowspan":"4","value":"Под заказ"}},{"model":"УБ-80","conveyorWidth":"800"},{"model":"УБ-100","conveyorWidth":"1000","shot":"4*180"},{"model":"УБ-120","conveyorWidth":"1200","shot":"4*260"},{"isColSpan":true,"text":"Очистка производится не со всех сторон"}]
   },
     {
     id: "vykatnoy-stol",
@@ -296,13 +244,7 @@ export const productsData = [
       { title: "Универсальность", text: "Подстраивается под любые размеры и формы — от плоских панелей до объёмных узлов." },
       { title: "Обработка крупногабаритных деталей", text: "Подходит для массивных изделий, которые невозможно перемещать конвейером." }
     ],
-    tableData: [
-      { model: "УБ-765", sizeDetalis: "2000*1000", maxWorkpieceWeight: "5000", fractionConsumpion: "2*260", productivity: "30", separatePower: "30", ventilation: "11000", power: "35,8", availability: "Под заказ" },
-      { model: "УБ-7610", sizeDetalis: "2500*1500*280", maxWorkpieceWeight: "10000", fractionConsumpion: "3*260", productivity: "45", separatePower: "45", ventilation: "15000", power: "188,45", availability: "Под заказ" },
-      { model: "УБ-7620", sizeDetalis: "4000*3000*700", maxWorkpieceWeight: "20000", fractionConsumpion: "4*260", productivity: "60", separatePower: "60", ventilation: "21500", power: "183,35", availability: "Под заказ" },
-      { model: "УБ-7630", sizeDetalis: "4000*2000", maxWorkpieceWeight: "30000", fractionConsumpion: "4*260", productivity: "60", separatePower: "60", ventilation: "21500", power: "83,2", availability: "Под заказ" },
-      { isColSpan: true, text: "Очистка производится со всех сторон" }
-    ]
+    tableData: [{"model":"УБ-765","sizeDetalis":"2000*1000","maxWorkpieceWeight":"5000","fractionConsumpion":"2*260","productivity":"30","separatePower":"30","ventilation":"11000","power":"35,8","availability":{"rowspan":"4","value":"Под заказ"}},{"model":"УБ-7610","sizeDetalis":"2500*1500*280","maxWorkpieceWeight":"10000","fractionConsumpion":"3*260","productivity":"45","separatePower":"45","ventilation":"15000","power":"188,45"},{"model":"УБ-7620","sizeDetalis":"4000*3000*700","maxWorkpieceWeight":"20000","fractionConsumpion":{"rowspan":"2","value":"4*260"},"productivity":{"rowspan":"2","value":"60"},"separatePower":{"rowspan":"2","value":"60"},"ventilation":{"rowspan":"2","value":"21500"},"power":"183,35"},{"model":"УБ-7630","sizeDetalis":"4000*2000","maxWorkpieceWeight":"30000","power":"83,2"},{"isColSpan":true,"text":"Очистка производится со всех сторон"}]
   },
   {
     id: "turbina",
@@ -331,11 +273,15 @@ export const productsData = [
       { title: "Экономичность", text: "Износостойкие материалы снижают затраты на ремонт и энергию." },
       { title: "Универсальность", text: "Регулировка скорости подходит для грубых и деликатных поверхностей." }
     ],
+    tableHeader: [
+      [{title: "Модель", rowspan:"2"},{title: "Мощность (кВт)", rowspan:"2"},{title: "Поток абразива (кг/мин)", rowspan:"2"},{title: "Размер соединительного фланца", colspan:"6"}],
+      ["А","Б","В","Г","Д","Ø отверстий"]
+    ],
     tableData: [
-      { model: "УИТ-7.5", power: "7.5", abrasiveFlow: "125", flangeA: "670", flangeB: "140", flangeV: "230", flangeG: "200", flangeD: "275", holes: "21" },
-      { model: "УИТ-11", power: "11", abrasiveFlow: "180", flangeA: "150", flangeB: "240", flangeV: "240", flangeG: "", flangeD: "", holes: "" },
-      { model: "УИТ-15", power: "15", abrasiveFlow: "250", flangeV: "", flangeG: "", flangeD: "", holes: "" },
-      { model: "УИТ-18", power: "22", abrasiveFlow: "360", flangeA: "645", flangeB: "173", flangeV: "258", flangeG: "100 или 190", flangeD: "370 или 190", holes: "" }
+      { model: "УИТ-7.5", power: "7.5", abrasiveFlow: "125", flangeA: "670", flangeB: "140", flangeV: "230", flangeG: {value: "200", rowspan: "3"}, flangeD: {value: "275", rowspan: "3"}, holes: {value: "21", rowspan: "4"} },
+      { model: "УИТ-11", power: "11", abrasiveFlow: "180", flangeA: {value: "150", rowspan: "2"}, flangeB: {value: "240", rowspan: "2"}, flangeV: {value: "240", rowspan: "2"} },
+      { model: "УИТ-15", power: "15", abrasiveFlow: "250" },
+      { model: "УИТ-18", power: "22", abrasiveFlow: "360", flangeA: "645", flangeB: "173", flangeV: "258", flangeG: "100 или 190", flangeD: "370 или 190" }
     ]
   },
   {
