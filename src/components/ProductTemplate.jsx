@@ -54,7 +54,7 @@ const AdvantagesSection = ({ advantages }) => (
 
 
 
-const ProductTemplate = ({ title, image, description, advantages, tableData, carouselImages, faqData, constryctionTitle, constryctionDescription, applicationTitle, applicationDescription,  }) => {
+const ProductTemplate = ({ title, image, description, advantages, tableData, carouselImages, faqData, constryctionTitle, constryctionDescription, applicationTitle, applicationDescription, titleBlockTurbine, descriptionBlockTurbine  }) => {
   
 
   return (
@@ -79,6 +79,9 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
           ))}
         </div>
       </div>
+
+      <h2 className="mg-2 md-9 mg-7">{titleBlockTurbine}</h2>
+      <p className="ug-09">{descriptionBlockTurbine}</p>
 
 
       <ImageCarousel images={carouselImages}/>

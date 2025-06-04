@@ -26,6 +26,10 @@ p {
   margin: 0 auto;
 }
 
+.ug-09 {
+  text-align: justify;
+}
+
 a {
   text-decoration: none;
   color: rgb(113, 189, 255);
