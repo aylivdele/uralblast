@@ -1,4 +1,5 @@
 // ProductTemplate.jsx
+import { useMemo } from "react";
 import Breadcrumbs from "./Breadcrumbs";
 import ImageCarousel from "./ImageCarousel";
 
@@ -54,8 +55,7 @@ const AdvantagesSection = ({ advantages }) => (
 
 
 
-const ProductTemplate = ({ title, image, description, advantages, tableData, carouselImages, faqData, constryctionTitle, constryctionDescription, applicationTitle, applicationDescription, titleBlockTurbine, descriptionBlockTurbine  }) => {
-  
+const ProductTemplate = ({ title, image, description, advantages, tableHeader, tableData, carouselImages, constryctionTitle, constryctionDescription, applicationTitle, applicationDescription, titleBlockTurbine, descriptionBlockTurbine }) => {
 
   return (
     <div className="container" style={{ overflow: 'hidden'}}>
@@ -92,11 +92,27 @@ const ProductTemplate = ({ title, image, description, advantages, tableData, car
       <div className="table-model appear">
         <table className="iksweb_l">
           <thead>
-            <tr>
-              {Object.keys(tableData[0]).filter(key => key !== "isColSpan" && key !== "text").map((key, index) => (
-                <th className="table_sm-01" key={index}>{tableColumnNamesMap[key] ?? key}</th>
-              ))}
-            </tr>
+            {
+              tableHeader 
+                ? tableHeader.map((row, index) => (
+                <tr key={index}>
+                  {
+                    row.map((col, colIndex) => (
+                      <th key={colIndex} className="table_sm-01" rowSpan={col.rowspan} colSpan={col.colspan}>{col.title ?? col}</th>
+                    ))
+                  }
+                </tr>))
+                : (
+                  <tr>
+                    {
+                      Object.keys(tableData[0]).filter(key => key !== "isColSpan" && key !== "text").map((key, index) => (
+                      <th className="table_sm-01" key={index}>{tableColumnNamesMap[key] ?? key}</th>
+                    ))
+                    }
+                  </tr>
+                )
+            }
+            
           </thead>
           <tbody>
             {tableData.map((row, index) => (

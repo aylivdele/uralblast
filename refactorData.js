@@ -1,15 +1,10 @@
 const tableData = [
-      { model: "УИД-376", voltage: "380/50", power: "24.9", telpherCount: "1", turbineCount: "2*7.5 кВт", load: "500", productivity: "6", ventilation: "5200", dimensions: "800/1200", availability: "Под заказ" },
-      { model: "УИД-376Е", voltage: "380/50", power: "24.9", telpherCount: "2", turbineCount: "2*7.5 кВт", load: "1000", productivity: "6", ventilation: "5200", dimensions: "800/1200", availability: "Под заказ" },
-      { model: "УИД-378", voltage: "380/50", power: "41.35", telpherCount: "1", turbineCount: "2*11 кВт", load: "2000", productivity: "12", ventilation: "10500", dimensions: "1000/1500", availability: "Под заказ" },
-      { model: "УИД-378Е", voltage: "380/50", power: "41.35", telpherCount: "2", turbineCount: "2*11 кВт", load: "1000", productivity: "12", ventilation: "10500", dimensions: "1000/1500", availability: "Под заказ" },
-      { model: "УИД-3710", voltage: "380/50", power: "49.35", telpherCount: "1", turbineCount: "2*15 кВт", load: "2000", productivity: "12", ventilation: "11000", dimensions: "1200/1600", availability: "Под заказ" },
-      { model: "УИД-3710Е", voltage: "380/50", power: "50", telpherCount: "2", turbineCount: "2*15 кВт", load: "5000", productivity: "30", ventilation: "11000", dimensions: "1200/1600", availability: "Под заказ" },
-      { model: "УИД-3720", voltage: "380/50", power: "68", telpherCount: "1", turbineCount: "3*15 кВт", load: "5000", productivity: "30", ventilation: "15000", dimensions: "1500/2000", availability: "Под заказ" },
-      { model: "УИД-3720Е", voltage: "380/50", power: "68", telpherCount: "2", turbineCount: "3*15 кВт", load: "2000", productivity: "30", ventilation: "15000", dimensions: "1500/2000", availability: "Под заказ" },
-      { model: "УИД-3750", voltage: "380/50", power: "102.2", telpherCount: "1", turbineCount: "4*15 кВт", load: "10000", productivity: "60", ventilation: "18000", dimensions: "2000/2500", availability: "Под заказ" },
-      { isColSpan: true, text: "Очистка производится со всех сторон" }
-    ];
+      { model: "УИТ-7.5", power: "7.5", abrasiveFlow: "125", flangeA: "670", flangeB: "140", flangeV: "230", flangeG: "200", flangeD: "275", holes: "21" },
+      { model: "УИТ-11", power: "11", abrasiveFlow: "180", flangeA: "150", flangeB: "240", flangeV: "240", flangeG: "", flangeD: "", holes: "" },
+      { model: "УИТ-15", power: "15", abrasiveFlow: "250", flangeV: "", flangeG: "", flangeD: "", holes: "" },
+      { model: "УИТ-18", power: "22", abrasiveFlow: "360", flangeA: "645", flangeB: "173", flangeV: "258", flangeG: "100 или 190", flangeD: "370 или 190", holes: "" }
+    ]
+
 
 for (let index = 0; index < tableData.length - 1; index++) {
   const row = tableData[index];
