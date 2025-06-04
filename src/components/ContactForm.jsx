@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 const ContactForm = () => {
+  const [isLoading, setIsLoading] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -18,18 +19,37 @@ const ContactForm = () => {
     setFormData({ ...formData, file });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    alert("Ваша заявка отправлена, с вами свяжутся в ближайшее время");
+  const handleSubmit = (data) => {
+    if (!data.get("name") || !data.get("phone") || !data.get("email") || !data.get("message")) {
+      alert('Пожалуйста, заполните все обязательные поля!');
+      return;
+    }
+    setIsLoading(true);
+
+    data.append("subject", "Заявка");
+    fetch('/api.php', { method: 'POST', body: data})
+      .then(result => {
+        if (result.body) {
+          result.text().then(text => console.log("Form submitted:", text))
+        } else {
+          console.log("Form submitted:", result);
+        }
+      })
+      .catch(reason => console.error("Form submition error:", reason))
+      .finally(() => {
+        setFormData({});
+        setIsLoading(false);
+      });
   };
 
   return (
-    <form className="contact-block-form appear section" id='contact-form' onSubmit={handleSubmit}>
+    <form className="contact-block-form appear section" id='contact-form' action={handleSubmit}>
       <h2>Интересует наше оборудование? Оставьте заявку и мы перезвоним</h2>
       <div className="form-block-row">
         <div className="form-group">
           <input
+            id='name'
+            name='name'
             type="text"
             placeholder="Введите ваше имя"
             value={formData.name}
@@ -38,6 +58,8 @@ const ContactForm = () => {
         </div>
         <div className="form-group">
           <input
+            id='phone'
+            name='phone'
             type="tel"
             placeholder="Введите номер телефона"
             value={formData.phone}
@@ -46,6 +68,8 @@ const ContactForm = () => {
         </div>
         <div className="form-group">
           <input
+            id='email'
+            name='email'
             type="email"
             placeholder="Введите ваш Email"
             value={formData.email}
@@ -57,6 +81,8 @@ const ContactForm = () => {
       <div className="form-row-combined">
         <div className="form-group">
           <textarea
+            id='message'
+            name='message'
             placeholder="Введите что вас интересует"
             value={formData.message}
             onChange={(e) => setFormData({ ...formData, message: e.target.value })}
@@ -66,7 +92,7 @@ const ContactForm = () => {
 
         <div className="form-group">
           <div className="file-upload">
-            <input type="file" onChange={handleFileChange} id="fileInput" />
+            <input type="file" onChange={handleFileChange} id="fileInput" name='fileInput'/>
             <label htmlFor="fileInput">
               <span>Вы можете прикрепить файл или чертеж весом до 20 МБ</span>
             </label>
@@ -74,7 +100,7 @@ const ContactForm = () => {
         </div>
       </div>
 
-      <button type="submit">Отправить заявку</button>
+      <button type="submit" disabled={isLoading}>Отправить заявку</button>
     </form>
   );
 };
