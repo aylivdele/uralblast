@@ -13,11 +13,11 @@ const Breadcrumbs = ({name}) => {
     <div className="breadcrumbs">
       <Link to='/' className="link">Главная</Link> 
       {
-        pathname.split('/').filter(part => !!part).flatMap(part => {
+        pathname.split('/').filter(part => !!part).flatMap((part, index) => {
           if (definedNames[part]) {
-            return [<div>/</div>, (<Link className="link" to={`/${part}`}>{definedNames[part]}</Link>)];
+            return [<div key={`divider${index}`}>/</div>, (<Link key={index} className="link" to={`/${part}`}>{definedNames[part]}</Link>)];
           }
-          return [<div>/</div>,`${name ?? part}`];
+          return [<div key={`divider${index}`}>/</div>,`${name ?? part}`];
         })
       }
     </div>

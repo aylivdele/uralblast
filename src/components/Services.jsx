@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
+import { toast } from "react-toastify";
 
 const ServicesSection = () => {
   const [selectedService, setSelectedService] = useState(0);
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-  });
+  const [isLoading, setIsLoading] = useState(false); 
 
+  const formRef = useRef(null);
+
+  const nameRef = useRef(null);
+  const phoneRef = useRef(null);
+  const emailRef = useRef(null);
   const servicesData = [
     {
       icon: "images/icons-services_1.png",
@@ -48,24 +50,48 @@ const ServicesSection = () => {
     },
   ];
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
+  const handleSubmit = (data) => {
+    if (!data.get("name") || !data.get("phone") || !data.get("email")) {
+      if (!data.get("name")) {
+        nameRef.current.classList.add('empty')
+      }
+      if (!data.get("phone")) {
+        phoneRef.current.classList.add('empty')
+      }
+      if (!data.get("email")) {
+        emailRef.current.classList.add('empty')
+      }
+      toast('Пожалуйста, заполните все обязательные поля', {type: 'warning', theme: 'colored'});
+      return;
+    }
+    nameRef.current.classList.remove('empty')
+    phoneRef.current.classList.remove('empty')
+    emailRef.current.classList.remove('empty')
+    setIsLoading(true);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Здесь можно добавить логику отправки формы
-    console.log("Form submitted:", formData);
-    // Очистка формы после отправки
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-    });
+    data.append("subject", "Cервисная помощь");
+    fetch('/api.php', { method: 'POST', body: data})
+      .then(result => {
+        if (result.status < 300) {
+          toast("Запрос успешно отправлен!", {type: 'info', theme: 'colored'});
+        } else {
+          throw new Error(result);
+        }
+        if (result.body) {
+          result.text().then(text => console.log("Form submitted:", text))
+        } else {
+          console.log("Form submitted:", result);
+        }
+      })
+      .catch(reason => {
+        toast('Ошибка при отправке запроса! Пожалуйста, попробуйте позже. Также вы можете связаться используя телефон или почту.', {type: 'error', theme: 'colored', autoClose: false});
+        console.error("Form submition error:", reason);
+      })
+      .finally(() => {
+        formRef.current.reset();
+        setIsLoading(false);
+      });
+    
   };
 
   return (
@@ -104,35 +130,29 @@ const ServicesSection = () => {
 
             <div className="contact-form-advantes section from-right" id='service-form'>
               <h2>Нужна сервисная помощь? Свяжитесь с нами</h2>
-              <form onSubmit={handleSubmit}>
+              <form ref={formRef} action={handleSubmit}>
                 <div className="form-row-advantes">
                   <input
+                    ref={nameRef}
                     type="text"
                     name="name"
                     placeholder="Введите ваше имя*"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
                   />
                   <input
+                    ref={emailRef}
                     type="email"
                     name="email"
                     placeholder="Введите ваш Email*"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
                   />
                 </div>
                 <div className="form-row-advantes">
                   <input
+                    ref={phoneRef}
                     type="tel"
                     name="phone"
                     placeholder="Введите ваш телефон*"
-                    value={formData.phone}
-                    onChange={handleInputChange}
-                    required
                   />
-                  <button type="submit">Отправить</button>
+                  <button type="submit" disabled={isLoading}>Отправить</button>
                 </div>
               </form>
             </div>

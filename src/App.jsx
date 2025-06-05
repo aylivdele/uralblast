@@ -14,6 +14,7 @@ import { partsData } from './data/partsData';
 import SideButton from './components/SideButtons';
 import useSrollToTop from './hooks/scrollToTop.hook';
 import useAnimations from './hooks/useAnimations.hook';
+import { ToastContainer } from 'react-toastify';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="app">
+      <ToastContainer />
       <SideButton/>
       <Navbar />
      

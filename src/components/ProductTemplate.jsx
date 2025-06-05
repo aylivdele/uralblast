@@ -1,7 +1,7 @@
 // ProductTemplate.jsx
-import { useMemo } from "react";
 import Breadcrumbs from "./Breadcrumbs";
 import ImageCarousel from "./ImageCarousel";
+import ContactForm from "./ContactForm";
 
 const tableColumnNamesMap = {
   model: 'Модель',
@@ -131,6 +131,8 @@ const ProductTemplate = ({ title, image, description, advantages, tableHeader, t
           </tbody>
         </table>
       </div>
+      
+      <ContactForm />
       
     </div>
   );
