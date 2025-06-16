@@ -2,7 +2,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import "./css/styles.css";
+// import "./css/styles.css";
+import "./css/output.css";
 import "./css/catalog.css";
 import "./css/video.css";
 import "./css/navbar.css";
