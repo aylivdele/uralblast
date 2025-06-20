@@ -24,7 +24,7 @@ const Faq = () => {
               className="faq-question" 
               onClick={() => toggleAnswer(index)}
             >
-              <h3>{item.question}</h3>
+              <h4>{item.question}</h4>
               <span className="faq-icon">
                 {activeIndex === index ? '−' : '+'}
               </span>
