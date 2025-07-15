@@ -1,3 +1,4 @@
+import { HelmetProvider } from '@dr.pogodin/react-helmet';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from "./components/Navbar";
 import Video from "./components/BackgroundVideo";
@@ -22,6 +23,7 @@ function App() {
   useAnimations();
 
   return (
+    <HelmetProvider>
     <div className="app">
       <ToastContainer />
       <SideButton/>
@@ -53,6 +55,7 @@ function App() {
       <Footer />
 
     </div>
+    </HelmetProvider>
   );
 }
 

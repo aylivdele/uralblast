@@ -1,4 +1,5 @@
 // ProductTemplate.jsx
+import { Helmet } from '@dr.pogodin/react-helmet';
 import Breadcrumbs from "./Breadcrumbs";
 import ImageCarousel from "./ImageCarousel";
 import ContactForm from "./ContactForm";
@@ -37,7 +38,7 @@ const tableColumnNamesMap = {
   maxWorkpieceWeight: 'Максимальный вес обрабатываемой детали, кг',
   fractionConsumpion: 'Расход дроби, кг/мин',
   separatePower: 'Отдельная мощность, т/ч',
-}
+};
 
 const AdvantagesSection = ({ advantages }) => (
   <section style={{ margin: "40px 0" }} className="appear">
@@ -53,13 +54,36 @@ const AdvantagesSection = ({ advantages }) => (
   </section>
 );
 
-
-
-const ProductTemplate = ({ title, image, description, advantages, tableHeader, tableData, carouselImages, constryctionTitle, constryctionDescription, applicationTitle, applicationDescription, titleBlockTurbine, descriptionBlockTurbine }) => {
+const ProductTemplate = ({
+  title,
+  image,
+  description,
+  advantages,
+  tableHeader,
+  tableData,
+  carouselImages,
+  constryctionTitle,
+  constryctionDescription,
+  applicationTitle,
+  applicationDescription,
+  titleBlockTurbine,
+  descriptionBlockTurbine,
+  seoTitle,
+  seoDescription,
+  seoKeywords
+}) => {
 
   return (
-    <div className="container_event-product" style={{ overflow: 'hidden'}}>
-      <Breadcrumbs name={title}/>
+    <div className="container_event-product" style={{ overflow: 'hidden' }}>
+      {/* SEO Helmet */}
+      <Helmet>
+        <title>{seoTitle}</title>
+        <meta name="description" content={seoDescription} />
+        <meta name="keywords" content={seoKeywords?.join(', ')} />
+      </Helmet>
+
+      <Breadcrumbs name={title} />
+
       <div className="top-section">
         <div className="image-block from-left">
           <img src={image} alt={title} />
@@ -83,36 +107,39 @@ const ProductTemplate = ({ title, image, description, advantages, tableHeader, t
       <h2 className="mg-2 md-9 mg-7">{titleBlockTurbine}</h2>
       <p className="ug-09">{descriptionBlockTurbine}</p>
 
-
-      <ImageCarousel images={carouselImages}/>
+      <ImageCarousel images={carouselImages} />
 
       <AdvantagesSection advantages={advantages} />
-     
 
       <div className="table-model appear">
         <table className="iksweb_l">
           <thead>
-            {
-              tableHeader 
-                ? tableHeader.map((row, index) => (
+            {tableHeader
+              ? tableHeader.map((row, index) => (
                 <tr key={index}>
-                  {
-                    row.map((col, colIndex) => (
-                      <th key={colIndex} className="table_sm-01" rowSpan={col.rowspan} colSpan={col.colspan}>{col.title ?? col}</th>
-                    ))
-                  }
-                </tr>))
-                : (
-                  <tr>
-                    {
-                      Object.keys(tableData[0]).filter(key => key !== "isColSpan" && key !== "text").map((key, index) => (
-                      <th className="table_sm-01" key={index}>{tableColumnNamesMap[key] ?? key}</th>
-                    ))
-                    }
-                  </tr>
-                )
-            }
-            
+                  {row.map((col, colIndex) => (
+                    <th
+                      key={colIndex}
+                      className="table_sm-01"
+                      rowSpan={col.rowspan}
+                      colSpan={col.colspan}
+                    >
+                      {col.title ?? col}
+                    </th>
+                  ))}
+                </tr>
+              ))
+              : (
+                <tr>
+                  {Object.keys(tableData[0])
+                    .filter(key => key !== "isColSpan" && key !== "text")
+                    .map((key, index) => (
+                      <th className="table_sm-01" key={index}>
+                        {tableColumnNamesMap[key] ?? key}
+                      </th>
+                    ))}
+                </tr>
+              )}
           </thead>
           <tbody>
             {tableData.map((row, index) => (
@@ -123,7 +150,14 @@ const ProductTemplate = ({ title, image, description, advantages, tableHeader, t
               ) : (
                 <tr key={index}>
                   {Object.values(row).map((val, i) => (
-                    <td className="table_sm-01" key={i} rowSpan={val.rowspan} colSpan={ val.colspan}>{val.value ?? val}</td>
+                    <td
+                      className="table_sm-01"
+                      key={i}
+                      rowSpan={val.rowspan}
+                      colSpan={val.colspan}
+                    >
+                      {val.value ?? val}
+                    </td>
                   ))}
                 </tr>
               )
@@ -131,9 +165,8 @@ const ProductTemplate = ({ title, image, description, advantages, tableHeader, t
           </tbody>
         </table>
       </div>
-      
+
       <ContactForm />
-      
     </div>
   );
 };
